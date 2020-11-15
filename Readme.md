@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Anna Korsak](https://up.htmlacademy.ru/adaptive/21/user/240292).
-* Наставник: `Неизвестно`.
+* Наставник: `Алексей Пудников`.
 
 ---
 
