@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Вязание на заказ</title>
+</head>
+
+<body class="page__body">
+    <header class="page-header">
+        <a href="index.html" class="page-header__logo logo" alt="Магазин товаров ручной работы «Мишка»">
+            <img src="https://via.placeholder.com/86x35">
+        </a>
+        <nav class="main-nav">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
+            </button>
+            <ul class="main-nav__list site-list">
+                <li class="site-list__item">
+                    <a href="catalog.html">
+                      Каталог товаров
+                    </a>
+                </li>
+                <li class="site-list__item">
+                    <a href="service.html">
+                      Вязание на заказ
+                    </a>
+                </li>
+            </ul>
+            <ul class="main-nav__list user-list">
+                <li class="user-list__item user-list__item-search">
+                    <a href="#search">
+                        <svg class="user-list__item-search-icon" width="18" height="18">
+                            <use></use>
+                        </svg> Поиск по сайту
+                    </a>
+                </li>
+                <li class="user-list__item user-list__item-cart">
+                    <a href="cart.html">
+                        <svg class="user-list__item-cart-icon" width="21" height="18">
+                            <use></use>
+                        </svg> Корзина: пока пуста
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-main">
+        <section class="form-intro">
+            <div class="form-intro__wrapper">
+                <h1 class="form-intro__title">Вязание на заказ</h1>
+                <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+            </div>
+        </section>
+
+        <form class="form" method="post" action="https://echo.htmlacademy.ru" target="_blank">
+            <fieldset class="form__product-type product-type">
+                <div class="">Тип:</div>
+                <ul class="product-type__list list-unstyled" tabindex="0">
+                    <li class="product-type__item">
+                        <input class="product-type__item--radio" type="radio" name="product_type" value="accessory" id="radio--accessory" checked>
+                        <label for="radio-accessory">Аксессуар для интерьера</label>
+                    </li>
+                    <li class="product-type__item">
+                        <input class="product-type__item--radio" type="radio" name="product_type" value="toy" id="radio--toy">
+                        <label for="radio--toy">Детская игрушка</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset class="form__color color">
+                <div class="">Цвет:</div>
+                <ul class="color__list list-unstyled">
+                    <li class="color__item">
+                        <input class="color__item--checkbox" type="checkbox" name="color" value="white" id="checkbox--white" checked>
+                        <label for="checkbox-white" tabindex="0"><span class="color__item--cross"></span>Белый</label>
+                    </li>
+                    <li class="color__item">
+                        <input class="color__item--checkbox" type="checkbox" name="color" value="grey" id="checkbox--grey">
+                        <label for="checkbox--grey" tabindex="0"><span class="color__item--cross"></span>Серый</label>
+                    </li>
+                    <li class="color__item">
+                        <input class="color__item--checkbox" type="checkbox" name="color" value="tiffany" id="checkbox--tiffany" checked>
+                        <label for="checkbox--tiffany" tabindex="0"><span class="color__item--cross"></span>«Тиффани»</label>
+                    </li>
+                    <li class="color__item">
+                        <input class="color__item--checkbox" type="checkbox" name="color" value="black" id="checkbox--black">
+                        <label for="checkbox--black" tabindex="0"><span class="color__item--cross"></span>Черный</label>
+                    </li>
+                    <li class="color__item">
+                        <input class="color__item--checkbox" type="checkbox" name="color" value="pink" id="checkbox--pink">
+                        <label for="checkbox--pink" tabindex="0"><span class="color__item--cross"></span>Розовый</label>
+                    </li>
+                    <li class="color__item">
+                        <input class="color__item--checkbox" type="checkbox" name="color" value="orange" id="checkbox--orange">
+                        <label for="checkbox--orange" tabindex="0"><span class="color__item--cross"></span>Оранжевый</label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <fieldset class="form__contact contact">
+                <div class="form__headings">ФИО</div>
+                <p>
+                    <input class="contact__field" id="text--name" type="text" name="name" placeholder="Введите ваше имя*" pattern="[A-Za-z]{1,}">
+                    <label for="text--name" class="contact__label">Имя:</label>
+                </p>
+                <p>
+                    <input class="contact__field" id="text--surname" type="text" name="surname" placeholder="Укажите фамилию*" pattern="[A-Za-z]{1,}">
+                    <label for="text--surname" class="contact__label">Фамилия:</label>
+                </p>
+                <p>
+                    <input class="contact__field" id="text--second-name" type="text" name="second-name" placeholder="Отчество, если желаете" pattern="[A-Za-z]{1,}">
+                    <label for="text--second-name" class="contact__label">Отчество:</label>
+                </p>
+            </fieldset>
+
+            <fieldset class="form__contact-details contact-details">
+                <div class="form__headings">тел</div>
+                <p>
+                    <input class="contact-details__field" id="text--phone" type="text" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="[0-9]{10}">
+                    <img src="https://via.placeholder.com/25x24">
+                </p>
+                <div class="form__headings">e-mail</div>
+                <p>
+                    <input class="contact-details__field" id="text--phone" type="email" name="email" placeholder="Ваш Email*" pattern="[0-9]{10}">
+                    <img src="https://via.placeholder.com/32x21">
+                </p>
+                <div class="form__headings">доп</div>
+                <p>
+                    <textarea class="contact-details__field contact-details__field--additional" id="text--additional" type="text" name="email" placeholder="Опишите все ваши 
+пожелания к заказу"></textarea>
+                </p>
+                <p>*Поля обязательны для заполнения</p>
+            </fieldset>
+            <button class="form__button button" type="submit">Отправить заказ</button>
+        </form>
+    </main>
+
+    <footer class="page-footer">
+        <div class="page-footer__social social">
+            <a class="logo" href="#"></a>
+
+            <ul class="social__list">
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+                        Мы в Вконтакте
+                        <svg class="social__link--instagram-icon" width="22" height="21">
+                            <use></use>
+                        </svg> 
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+                        Мы в Фейсбуке
+                        <svg class="social__link--facebook-icon" width="15" height="28">
+                            <use></use>
+                        </svg> 
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+                        Мы в Твиттере
+                        <svg class="social__link--instagram-icon" width="23" height="20">
+                            <use></use>
+                        </svg> 
+                    </a>
+                </li>
+            </ul>
+            <div class="page-footer__copyright copyright">
+                <b class="copyright__text">Разработано:</b>
+
+                <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+                    HTML Academy
+                    <svg class="social__link--instagram-icon" width="22" height="21">
+                        <use></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
