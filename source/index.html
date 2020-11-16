@@ -6,21 +6,21 @@
     <title>Магазин товаров ручной работы «Мишка»</title>
 </head>
 
-<body class="page__body">
-    <header class="page-header">
-        <a class="page-header__logo logo" title="Магазин товаров ручной работы «Мишка»">
-            <img src="https://via.placeholder.com/86x35">
+<body class="page">
+    <header class="header">
+        <a class="header__logo logo" title="Магазин товаров ручной работы «Мишка»">
+            <img class="logo__img" src="https://via.placeholder.com/86x35">
         </a>
-        <nav class="main-nav">
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
+        <nav class="main-navigation">
+            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
             </button>
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                    <a href="catalog.html">
+            <ul class="main-navigation__list navigation-list">
+                <li class="navigation__item">
+                    <a class="navigation__link navigation__link--active" href="catalog.html">
                       Каталог товаров
                     </a>
                 </li>
-                <li class="site-list__item">
+                <li class="navigation__item">
                     <a href="service.html">
                       Вязание на заказ
                     </a>
@@ -29,34 +29,17 @@
             <ul class="main-nav__list user-list">
                 <li class="user-list__item user-list__item-search">
                     <a href="#search">
-                        <svg class="user-list__item-search-icon" width="18" height="18">
-                            <use></use>
-                        </svg> Поиск по сайту
+                        <img class="user-list__item-search-icon" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
                     </a>
                 </li>
                 <li class="user-list__item user-list__item-cart">
                     <a href="cart.html">
-                        <svg class="user-list__item-cart-icon" width="21" height="18">
-                            <use></use>
-                        </svg> Корзина: пока пуста
+                        <img class="user-list__item-cart-icon" src="https://via.placeholder.com/21x18"><span>Корзина: пока пуста</span>
                     </a>
                 </li>
             </ul>
         </nav>
-        <nav class="additional-nav">
-            <ul class="additional-nav__list additional-list">
-                <li class="additional-list__item">
-                    <a href="new_items.html">Новые поступления</a>
-                </li>
-                <li class="additional-list__item">
-                    <a href="sale.html">Распродажа</a>
-                </li>
 
-            </ul>
-            <div class="additional-nav__item">
-                <span>Бесплатная доставка по России</span>
-            </div>
-        </nav>
     </header>
 
     <main class="page-main">
@@ -69,21 +52,18 @@
 
         <section class="catalog-navigation">
             <div class="catalog-navigation__wrapper">
-                <h1 class="visually-hidden">Каталог</h1>
+                <h2 class="visually-hidden">Каталог</h2>
                 <ul class="catalog-navigation__list">
                     <li class="catalog-navigation__item">
-                        <a href="interior.html">Предметы интерьера
-                            <svg class="user-list__item-lamp-icon" width="40" height="62">
-                                <use></use>
-                            </svg>
+                        <a href="interior.html"> <span>Предметы интерьера</span>
+                            <img class="user-list__item-lamp-icon" src="https://via.placeholder.com/40x62">
                         </a>
 
                     </li>
                     <li class="catalog-navigation__item">
-                        <a href="toys.html">Детские игрушки
-                            <svg class="user-list__item-block-icon" width="60" height="60">
-                                <use></use>
-                            </svg>
+                        <a href="toys.html"><span>Детские игрушки</span>
+                            
+                            <img class="user-list__item-block-icon" src="https://via.placeholder.com/60x60">
                         </a>
                     </li>
                 </ul>
@@ -92,77 +72,44 @@
 
         <section class="bestseller-item">
             <div class="bestseller-item__wrapper">
-                <h1 class="visually-hidden">Лучший товар недели</h1>
-                <h1 class="bestseller-item__title">Вязаные корзинки</h1>
-                <h2 class="bestseller-item__subtitle">Товар недели</h2>
-                <p class="bestseller-item__description">Экологически чистая пряжа,
-                    <br\>
-                        ручная работа. Доступны в шести
-                        <br\> расцветках, и трех размерах.</p>
-                <table class="bestseller-item__details">
-                    <tr>
-                        <td>Цвет:</td>
-                        <td>«Тиффани»/серый</td>
-                    </tr>
-                    <tr>
-                        <td>Диаметр:</td>
-                        <td>25 см</td>
-                    </tr>
-                    <tr>
-                        <td>Высота:</td>
-                        <td>15 см</td>
-                    </tr>
+                <h2 class="visually-hidden">Лучший товар недели</h2>
+                <h2 class="bestseller-item__title">Вязаные корзинки</h2>
+                <p class="bestseller-item__subtitle">Товар недели</p>
+                <p class="bestseller-item__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+                <ul class="bestseller-item__list">
+                    <li class="bestseller-item__item">Цвет:</li>
+                    <li class="bestseller-item__item">«Тиффани»/серый</li>
+                    <li class="bestseller-item__item">Диаметр:</li>
+                    <li class="bestseller-item__item">25 см</li>
+                    <li class="bestseller-item__item">Высота:</li>
+                    <li class="bestseller-item__item">15 см</li>
                     <p class="bestseller-item__price">Цена: 990 руб.</p>
                     <img src="https://via.placeholder.com/260x315">
                     <a class="bestseller-item__button button" href="#">Заказать</a>
-                </table>
+                    </table>
             </div>
         </section>
 
         <section class="about">
-            <h1 class="about__title">Коротко о нас:</h1>
-            <ul class="about__list ">
-                <li class="about__item">
-                    <svg class="about__item-material-icon" width="33" height="38">
-                        <use></use>
-                    </svg> Экологически
-                    <br\> чистые материалы
+            <p class="about__title">Коротко о нас:</p>
+            <ul class="about__list">
+                <li class="about__item"><img class="about__item-icon about__item-icon--flower" src="https://via.placeholder.com/33x38"><span>Экологически чистые материалы</span>
                 </li>
-                <li class="about__item">
-                    <svg class="about__item-money-icon" width="47" height="27">
-                        <use></use>
-                    </svg> Скандинавский стиль
-                    <br\> по российской цене
+                <li class="about__item"><img class="about__item-icon about__item-icon--money" src="https://via.placeholder.com/47x27"><span>Скандинавский стиль по российской цене</span>
                 </li>
-                <li class="about__item">
-                    <svg class="about__item-heart-icon" width="34" height="27">
-                        <use></use>
-                    </svg> Увеличивает лайки
-                    <br\>на фотографиях
+                <li class="about__item"><img class="about__item-icon about__item-icon--heart" src="https://via.placeholder.com/34x27"><span>Увеличивает лайки на фотографиях</span>
                 </li>
-                <li class="about__item">
-                    <svg class="about__item-knit-icon" width="35" height="34">
-                        <use></use>
-                    </svg> Связано вручную
-                    <br\> с любовью и умилением
+                <li class="about__item"><img class="about__item-icon about__item-icon--knitt" src="https://via.placeholder.com/35x34"><span>Связано вручную с любовью и умилением</span>
                 </li>
-                <li class="about__item">
-                    <svg class="about__item-rocket-icon" width="55" height="23">
-                        <use></use>
-                    </svg> Поддержка отечественного
-                    <br\> производителя
+                <li class="about__item"><img class="about__item-icon about__item-icon--rocket" src="https://via.placeholder.com/55x23"><span>Поддержка отечественного производителя</span>
                 </li>
-                <li class="about__item">
-                    <svg class="about__item-gift-icon" width="33" height="32">
-                        <use></use>
-                    </svg> Поставляется
-                    <br\> в подарочной упаковке
+                <li class="about__item"><img class="about__item-icon about__item-icon--gift" src="https://via.placeholder.com/33x32"><span>Поставляется в подарочной упаковке</span>
                 </li>
             </ul>
         </section>
 
         <section class="reviews">
-            <h1 class="reviews__title">Отзывы</h1>
+            <h2 class="reviews__title">Отзывы</h2>
             <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше
                 лайков!
             </p>
@@ -175,14 +122,14 @@
 
         <section class="contacts">
             <div class="contacts__wrapper">
-                <h1 class="contacts__title">Контакты</h1>
-                <p class="contacts__email">e-mail:</p>
-                <p class="contacts__email-text">info@mimimishkashop.ru</p>
-                <p class="contacts__address">адрес:</p>
-                <p class="contacts__address-text">г. Санкт-Петербург
-                    <br\>ул. Большая Конюшенная
-                        <br\>д. 19/8, офис 101
-                </p>
+                <div class="contacts__text">
+                    <h2 class="contacts__title">Контакты</h2>
+                    <p class="contacts__email">e-mail:</p>
+                    <p class="contacts__email-text">info@mimimishkashop.ru</p>
+                    <p class="contacts__address">адрес:</p>
+                    <p class="contacts__address-text">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101
+                    </p>
+                </div>
                 <div class="contacts__map map">
                     <img src="https://via.placeholder.com/320x454">
                 </div>
@@ -200,25 +147,19 @@
                 <li class="social__item">
                     <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
                         Мы в Вконтакте
-                        <svg class="social__link--instagram-icon" width="22" height="21">
-                            <use></use>
-                        </svg> 
+                        <img class="social__link--instagram-icon" src="https://via.placeholder.com/260x315">
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
                         Мы в Фейсбуке
-                        <svg class="social__link--facebook-icon" width="15" height="28">
-                            <use></use>
-                        </svg> 
+                        <img class="social__link--facebook-icon" src="https://via.placeholder.com/260x315">
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
                         Мы в Твиттере
-                        <svg class="social__link--instagram-icon" width="23" height="20">
-                            <use></use>
-                        </svg> 
+                        <img class="social__link--twitter-icon" src="https://via.placeholder.com/260x315">
                     </a>
                 </li>
             </ul>
@@ -226,10 +167,8 @@
                 <b class="copyright__text">Разработано:</b>
 
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                    HTML Academy
-                    <svg class="social__link--instagram-icon" width="22" height="21">
-                        <use></use>
-                    </svg>
+                    <span>HTML Academy</span>
+                    <img class="social__link--htmlacademy-icon" src="https://via.placeholder.com/260x315">
                 </a>
             </div>
         </div>
