@@ -6,43 +6,40 @@
     <title>Вязание на заказ</title>
 </head>
 
-<body class="page__body">
-    <header class="page-header">
-        <a href="index.html" class="page-header__logo logo" alt="Магазин товаров ручной работы «Мишка»">
-            <img src="https://via.placeholder.com/86x35">
+<body class="page">
+    <header class="header">
+        <a class="header__logo logo" title="Магазин товаров ручной работы «Мишка»">
+            <img class="logo__img" src="https://via.placeholder.com/86x35">
         </a>
-        <nav class="main-nav">
-            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
+        <nav class="main-navigation">
+            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
             </button>
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item">
-                    <a href="catalog.html">
+            <ul class="main-navigation__list navigation-list">
+                <li class="navigation__item">
+                    <a class="navigation__link navigation__link--active" href="catalog.html">
                       Каталог товаров
                     </a>
                 </li>
-                <li class="site-list__item">
+                <li class="navigation__item">
                     <a href="service.html">
                       Вязание на заказ
                     </a>
                 </li>
             </ul>
-            <ul class="main-nav__list user-list">
+            <ul class="main-navigation__list user-list">
                 <li class="user-list__item user-list__item-search">
                     <a href="#search">
-                        <svg class="user-list__item-search-icon" width="18" height="18">
-                            <use></use>
-                        </svg> Поиск по сайту
+                        <img class="user-list__item-search-icon" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
                     </a>
                 </li>
                 <li class="user-list__item user-list__item-cart">
                     <a href="cart.html">
-                        <svg class="user-list__item-cart-icon" width="21" height="18">
-                            <use></use>
-                        </svg> Корзина: пока пуста
+                        <img class="user-list__item-cart-icon" src="https://via.placeholder.com/21x18"><span>Корзина: пока пуста</span>
                     </a>
                 </li>
             </ul>
         </nav>
+
     </header>
 
     <main class="form-main">
@@ -55,7 +52,7 @@
 
         <form class="form" method="post" action="https://echo.htmlacademy.ru" target="_blank">
             <fieldset class="form__product-type product-type">
-                <div class="">Тип:</div>
+                <div class="product-type--text">Тип:</div>
                 <ul class="product-type__list list-unstyled" tabindex="0">
                     <li class="product-type__item">
                         <input class="product-type__item--radio" type="radio" name="product_type" value="accessory" id="radio--accessory" checked>
@@ -115,17 +112,17 @@
             </fieldset>
 
             <fieldset class="form__contact-details contact-details">
-                <div class="form__headings">тел</div>
+                <div class="form__heading form__heading--phone">тел</div>
                 <p>
                     <input class="contact-details__field" id="text--phone" type="text" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="[0-9]{10}">
                     <img src="https://via.placeholder.com/25x24">
                 </p>
-                <div class="form__headings">e-mail</div>
+                <div class="form__heading form__heading--email">e-mail</div>
                 <p>
                     <input class="contact-details__field" id="text--phone" type="email" name="email" placeholder="Ваш Email*" pattern="[0-9]{10}">
                     <img src="https://via.placeholder.com/32x21">
                 </p>
-                <div class="form__headings">доп</div>
+                <div class="form__heading form__heading--additional">доп</div>
                 <p>
                     <textarea class="contact-details__field contact-details__field--additional" id="text--additional" type="text" name="email" placeholder="Опишите все ваши 
 пожелания к заказу"></textarea>
@@ -144,25 +141,19 @@
                 <li class="social__item">
                     <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
                         Мы в Вконтакте
-                        <svg class="social__link--instagram-icon" width="22" height="21">
-                            <use></use>
-                        </svg> 
+                        <img class="social__link--instagram-icon" src="https://via.placeholder.com/22x21">
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
                         Мы в Фейсбуке
-                        <svg class="social__link--facebook-icon" width="15" height="28">
-                            <use></use>
-                        </svg> 
+                        <img class="social__link--facebook-icon" src="https://via.placeholder.com/15x28">
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
                         Мы в Твиттере
-                        <svg class="social__link--instagram-icon" width="23" height="20">
-                            <use></use>
-                        </svg> 
+                        <img class="social__link--twitter-icon" src="https://via.placeholder.com/23x20">
                     </a>
                 </li>
             </ul>
@@ -170,10 +161,8 @@
                 <b class="copyright__text">Разработано:</b>
 
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                    HTML Academy
-                    <svg class="social__link--instagram-icon" width="22" height="21">
-                        <use></use>
-                    </svg>
+                    <span>HTML Academy</span>
+                    <img class="social__link--htmlacademy-icon" src="https://via.placeholder.com/27x31">
                 </a>
             </div>
         </div>
