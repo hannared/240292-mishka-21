@@ -12,7 +12,7 @@
             <img class="logo__img" src="https://via.placeholder.com/86x35">
         </a>
         <nav class="main-navigation">
-            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
+            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span>
             </button>
             <ul class="main-navigation__list navigation-list">
                 <li class="navigation__item">
@@ -27,14 +27,14 @@
                 </li>
             </ul>
             <ul class="main-nav__list user-list">
-                <li class="user-list__item user-list__item-search">
+                <li class="user-list__item user-list__item--search">
                     <a href="#search">
-                        <img class="user-list__item-search-icon" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
+                        <img class="user-list__search-icon" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
                     </a>
                 </li>
-                <li class="user-list__item user-list__item-cart">
+                <li class="user-list__item user-list__item--cart">
                     <a href="cart.html">
-                        <img class="user-list__item-cart-icon" src="https://via.placeholder.com/21x18"><span>Корзина: пока пуста</span>
+                        <img class="user-list__cart-icon" src="https://via.placeholder.com/21x18"><span>Корзина: пока пуста</span>
                     </a>
                 </li>
             </ul>
@@ -45,8 +45,7 @@
     <main class="page-main">
         <section class="intro">
             <div class="intro__wrapper">
-
-                <h1 class="intro-title">Милые штуки ручной работы для дома</h1>
+                <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
             </div>
         </section>
 
@@ -55,55 +54,67 @@
                 <h2 class="visually-hidden">Каталог</h2>
                 <ul class="catalog-navigation__list">
                     <li class="catalog-navigation__item">
-                        <a href="interior.html"> <span>Предметы интерьера</span>
-                            <img class="user-list__item-lamp-icon" src="https://via.placeholder.com/40x62">
+                        <a href="interior.html"><span>Предметы интерьера</span>
+                            <img class="catalog-navigation__icon-lamp" src="https://via.placeholder.com/40x62">
                         </a>
-
                     </li>
                     <li class="catalog-navigation__item">
                         <a href="toys.html">
                             <span>Детские игрушки</span>
-                            <img class="user-list__item-block-icon" src="https://via.placeholder.com/60x60">
+                            <img class="catalog-navigation__icon-block" src="https://via.placeholder.com/60x60">
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section class="bestseller-item">
-            <div class="bestseller-item__wrapper">
-                <h2 class="visually-hidden">Лучший товар недели</h2>
-                <h2 class="bestseller-item__title">Вязаные корзинки</h2>
-                <p class="bestseller-item__subtitle">Товар недели</p>
-                <p class="bestseller-item__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-                <ul class="bestseller-item__list">
-                    <li class="bestseller-item__item">Цвет:</li>
-                    <li class="bestseller-item__item">«Тиффани»/серый</li>
-                    <li class="bestseller-item__item">Диаметр:</li>
-                    <li class="bestseller-item__item">25 см</li>
-                    <li class="bestseller-item__item">Высота:</li>
-                    <li class="bestseller-item__item">15 см</li>
-                    <p class="bestseller-item__price">Цена: 990 руб.</p>
-                    <img src="https://via.placeholder.com/260x315">
-                    <a class="bestseller-item__button button" href="#">Заказать</a>
-                    </table>
+        <section class="bestseller">
+            <div class="bestseller__wrapper">
+                <p class="visually-hidden">Лучший товар недели</p>
+                <h2 class="bestseller__title">Вязаные корзинки</h2>
+                <p class="bestseller__subtitle">Товар недели</p>
+                <p class="bestseller__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+                <ul class="bestseller__list">
+                    <li class="bestseller__item">
+                        <span class="bestseller__parameter">Цвет:</span>
+                        <span class="bestseller__value">«Тиффани»/серый</span>
+                    </li>
+                    <li class="bestseller__item">
+                        <span class="bestseller__parameter">Диаметр:</span>
+                        <span class="bestseller__value">25 см</span>
+                    </li>
+                    <li class="bestseller__item">
+                        <span class="bestseller__parameter">Высота:</span>
+                        <span class="bestseller__value">15 см</span>
+                    </li>
+                </ul>
+                <p class="bestseller__price">Цена: 990 руб.</p>
+                <img src="https://via.placeholder.com/260x315">
+                <a class="bestseller__button button" href="#">Заказать</a>
+                </table>
             </div>
         </section>
 
         <section class="about">
             <p class="about__title">Коротко о нас:</p>
             <ul class="about__list">
-                <li class="about__item"><img class="about__item-icon about__item-icon--flower" src="https://via.placeholder.com/33x38"><span>Экологически чистые материалы</span>
+                <li class="about__item"><img class="about__item-icon about__item-icon--flower" src="https://via.placeholder.com/33x38">
+                    <span>Экологически чистые материалы</span>
                 </li>
-                <li class="about__item"><img class="about__item-icon about__item-icon--money" src="https://via.placeholder.com/47x27"><span>Скандинавский стиль по российской цене</span>
+                <li class="about__item"><img class="about__item-icon about__item-icon--money" src="https://via.placeholder.com/47x27">
+                    <span>Скандинавский стиль по российской цене</span>
                 </li>
-                <li class="about__item"><img class="about__item-icon about__item-icon--heart" src="https://via.placeholder.com/34x27"><span>Увеличивает лайки на фотографиях</span>
+                <li class="about__item"><img class="about__item-icon about__item-icon--heart" src="https://via.placeholder.com/34x27">
+                    <span>Увеличивает лайки на фотографиях</span>
                 </li>
-                <li class="about__item"><img class="about__item-icon about__item-icon--knitt" src="https://via.placeholder.com/35x34"><span>Связано вручную с любовью и умилением</span>
+                <li class="about__item"><img class="about__item-icon about__item-icon--knitt" src="https://via.placeholder.com/35x34">
+                    <span>Связано вручную с любовью и умилением</span>
                 </li>
-                <li class="about__item"><img class="about__item-icon about__item-icon--rocket" src="https://via.placeholder.com/55x23"><span>Поддержка отечественного производителя</span>
+                <li class="about__item"><img class="about__item-icon about__item-icon--rocket" src="https://via.placeholder.com/55x23">
+                    <span>Поддержка отечественного производителя</span>
                 </li>
-                <li class="about__item"><img class="about__item-icon about__item-icon--gift" src="https://via.placeholder.com/33x32"><span>Поставляется в подарочной упаковке</span>
+                <li class="about__item"><img class="about__item-icon about__item-icon--gift" src="https://via.placeholder.com/33x32">
+                    <span>Поставляется в подарочной упаковке</span>
                 </li>
             </ul>
         </section>
@@ -113,10 +124,10 @@
             <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше
                 лайков!
             </p>
-            <b class="reviews__username">Анастасия Красильникова</b>
+            <p class="reviews__username">Анастасия Красильникова</p>
             <p class="reviews__nickname">@misssssiskras</p>
-            <a class="reviews__prev" href="#"></a>
-            <a class="reviews__next" href="#"></a>
+            <button class="reviews__prev" href="#"></button>
+            <button class="reviews__next" href="#"></button>
             <a class="reviews__button button" href="#">Написать</a>
         </section>
 
@@ -164,11 +175,11 @@
                 </li>
             </ul>
             <div class="page-footer__copyright copyright">
-                <b class="copyright__text">Разработано:</b>
+                <p class="copyright__text">Разработано:</p>
 
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
                     <span>HTML Academy</span>
-                    <img class="social__link--htmlacademy-icon" src="https://via.placeholder.com/27x31">
+                    <img class="copyright__htmlacademy-icon" src="https://via.placeholder.com/27x31">
                 </a>
             </div>
         </div>
