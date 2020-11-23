@@ -4,30 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Вязание на заказ</title>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page">
-    <header class="header">
+    <header class="page-header header">
         <a class="header__logo logo" title="Магазин товаров ручной работы «Мишка»">
             <img class="logo__img" src="https://via.placeholder.com/86x35">
         </a>
         <nav class="main-navigation">
-            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
+            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </button>
-            <ul class="main-navigation__list navigation-list">
+            <ul class="main-navigation__list navigation-list list-unstyled">
                 <li class="navigation__item">
                     <a class="navigation__link navigation__link--active" href="catalog.html">
-                      Каталог товаров
-                    </a>
+            Каталог товаров
+          </a>
                 </li>
                 <li class="navigation__item">
                     <a class="navigation__link" href="service.html">
-                      Вязание на заказ
-                    </a>
+            Вязание на заказ
+          </a>
                 </li>
             </ul>
-            <ul class="main-navigation__list user-list">
-                <li class="user-list__item user-list__item-search">
+            <ul class="main-navigation__list user-list list-unstyled">
+                <li class="user-list__item user-list__item-search ">
                     <a class="user-list__link user-list__link--active" href="#search">
                         <img class="user-list__icon-search" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
                     </a>
@@ -44,20 +47,23 @@
 
     <main class="form-main">
         <section class="form-intro">
-            <div class="form-intro__wrapper">
+            <div class="form-intro__backgroud">
                 <h1 class="form-intro__title">Вязание на заказ</h1>
             </div>
         </section>
         <section class="form-description">
-            <div class="form-description__wrapper">
-                <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+            <div class="form-description__wrapper wrapper">
+                <p class="form-description__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
             </div>
         </section>
 
         <form class="form" method="GET" action="https://echo.htmlacademy.ru" target="_blank">
-            <div class="form__wrapper">
+            <div class="form__wrapper wrapper">
                 <fieldset class="form__product-type product-type">
-                    <div class="product-type__text">Тип:</div>
+                    <div class="product-type__title">
+                        <div class="product-type__text">Тип</div>
+                        <div class="product-type__line"></div>
+                    </div>
                     <ul class="product-type__list list-unstyled" tabindex="0">
                         <li class="product-type__item">
                             <input class="product-type__radio" type="radio" name="product_type" value="accessory" id="radio-accessory" checked>
@@ -71,7 +77,10 @@
                 </fieldset>
 
                 <fieldset class="form__color color">
-                    <div class="">Цвет:</div>
+                    <div class="color__title">
+                        <div class="color__text">Цвет</div>
+                        <div class="color__line"></div>
+                    </div>
                     <ul class="color__list list-unstyled">
                         <li class="color__item">
                             <input class="color__checkbox" type="checkbox" name="color" value="white" id="checkbox-white" checked>
@@ -101,74 +110,88 @@
                 </fieldset>
 
                 <fieldset class="form__contact contact">
-                    <div class="form__headings">ФИО</div>
-                    <p>
-                        <input class="contact__field" id="text-name" type="text" name="name" placeholder="Введите ваше имя*" pattern="[A-Za-z]{1,}">
+                    <div class="contact__title">
+                        <div class="contact__text">ФИО</div>
+                        <div class="contact__line"></div>
+                    </div>
+                    <p class="contact__item">
                         <label for="text-name" class="contact__label">Имя:</label>
+                        <input class="contact__field" id="text-name" type="text" name="name" placeholder="Введите ваше имя*" pattern="[A-Za-z]{1,}">
                     </p>
-                    <p>
-                        <input class="contact__field" id="text-surname" type="text" name="surname" placeholder="Укажите фамилию*" pattern="[A-Za-z]{1,}">
+                    <p class="contact__item">
                         <label for="text-surname" class="contact__label">Фамилия:</label>
+                        <input class="contact__field" id="text-surname" type="text" name="surname" placeholder="Укажите фамилию*" pattern="[A-Za-z]{1,}">
                     </p>
-                    <p>
-                        <input class="contact__field" id="text-second-name" type="text" name="second-name" placeholder="Отчество, если желаете" pattern="[A-Za-z]{1,}">
+                    <p class="contact__item">
                         <label for="text-second-name" class="contact__label">Отчество:</label>
+                        <input class="contact__field" id="text-second-name" type="text" name="second-name" placeholder="Отчество, если желаете" pattern="[A-Za-z]{1,}">
                     </p>
                 </fieldset>
 
                 <fieldset class="form__contact-details contact-details">
-                    <div class="form__heading form__heading--phone">тел</div>
-                    <p>
-                        <input class="contact-details__field" id="text-phone" type="text" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="[0-9]{10}">
-                        <img src="https://via.placeholder.com/25x24">
+                    <div class="contact-details__title">
+                        <div class="contact-details__text">тел</div>
+                        <div class="contact__line "></div>
+                    </div>
+                    <p class="contact-details__item">
+                        <input class="contact-details__field " id="text-phone " type="text " name="phone " placeholder="+7 ХХХ ХХХ ХХ ХХ* " pattern="[0-9]{10} ">
+                        <img src="https://via.placeholder.com/25x24 ">
                     </p>
-                    <div class="form__heading form__heading--email">e-mail</div>
-                    <p>
-                        <input class="contact-details__field" id="text-phone" type="email" name="email" placeholder="Ваш Email*" pattern="[0-9]{10}">
-                        <img src="https://via.placeholder.com/32x21">
+                    <div class="contact-details__title">
+                        <div class="contact-details__text">e-mail</div>
+                        <div class="contact__line"></div>
+                    </div>
+                    <p class="contact-details__item">
+                        <input class="contact-details__field " id="text-phone " type="email " name="email " placeholder="Ваш Email* " pattern="[0-9]{10} ">
+                        <img src="https://via.placeholder.com/32x21 ">
                     </p>
-                    <div class="form__heading form__heading--additional">доп</div>
-                    <p>
-                        <textarea class="contact-details__field contact-details__field--additional" id="text-additional" type="text" name="email" placeholder="Опишите все ваши
-пожелания к заказу"></textarea>
+                    <div class="contact-details__title">
+                        <div class="contact-details__text ">доп</div>
+                        <div class="contact__line"></div>
+                    </div>
+                    <p class="contact-details__item">
+                        <textarea class="contact-details__field contact-details__field--additional " id="text-additional " type="text " name="email " placeholder="Опишите все ваши пожелания к заказу "></textarea>
                     </p>
-                    <p>*Поля обязательны для заполнения</p>
+                    <small class="contact-details__note">*Поля обязательны для заполнения</small>
                 </fieldset>
-                <button class="form__button button" type="submit">Отправить заказ</button>
+                <div class="form__action">
+                    <button class="form__button button" type="submit">Отправить заказ</button>
+                </div>
             </div>
         </form>
     </main>
 
     <footer class="page-footer">
         <div class="page-footer__social social">
-            <a class="logo" href="#"></a>
+            <a class="page-footer__logo logo" href="#">
+                <img class="visually-hidden" src="https://via.placeholder.com/101x34" alt="Магазин товаров ручной работы «Мишка»">
+            </a>
+            <div class="social__wrapper wrapper">
 
-            <ul class="social__list">
-                <li class="social__item">
-                    <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
-                        Мы в Вконтакте
-                        <img class="social__link--instagram-icon" src="https://via.placeholder.com/22x21">
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
-                        Мы в Фейсбуке
-                        <img class="social__link--facebook-icon" src="https://via.placeholder.com/15x28">
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
-                        Мы в Твиттере
-                        <img class="social__link--twitter-icon" src="https://via.placeholder.com/23x20">
-                    </a>
-                </li>
-            </ul>
+                <ul class="social__list list-unstyled">
+                    <li class="social__item">
+                        <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+                            <img class="social__link--instagram-icon" src="https://via.placeholder.com/22x21" alt="Мы в Вконтакте">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+                            <img class="social__link--facebook-icon" src="https://via.placeholder.com/15x28" alt="Мы в Фейсбуке">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+                            <img class="social__link--twitter-icon" src="https://via.placeholder.com/23x20" alt="Мы в Твиттере">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
             <div class="page-footer__copyright copyright">
-                <b class="copyright__text">Разработано:</b>
+                <p class="copyright__text">Разработано:</p>
 
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                    <span>HTML Academy</span>
-                    <img class="copyright__icon" src="https://via.placeholder.com/27x31">
+                    <img class="copyright__htmlacademy-icon" src="https://via.placeholder.com/27x31" alt="HTML Academy">
                 </a>
             </div>
         </div>
