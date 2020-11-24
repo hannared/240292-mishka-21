@@ -4,30 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Каталог товаров ручной работы «Мишка»</title>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body class="page">
-    <header class="header">
-        <a class="header__logo logo" href="index.html" title="Магазин товаров ручной работы «Мишка»">
+    <header class="page-header header">
+        <a class="header__logo logo" title="Магазин товаров ручной работы «Мишка»">
             <img class="logo__img" src="https://via.placeholder.com/86x35">
         </a>
         <nav class="main-navigation">
-            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span</button>
+            <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
             </button>
-            <ul class="main-navigation__list navigation-list">
+            <ul class="main-navigation__list navigation-list list-unstyled">
                 <li class="navigation__item">
                     <a class="navigation__link navigation__link--active" href="catalog.html">
-                    Каталог товаров
-                  </a>
+        Каталог товаров
+      </a>
                 </li>
                 <li class="navigation__item">
                     <a class="navigation__link" href="service.html">
-                    Вязание на заказ
-                  </a>
+        Вязание на заказ
+      </a>
                 </li>
             </ul>
-            <ul class="main-navigation__list user-list">
-                <li class="user-list__item user-list__item-search">
+            <ul class="main-navigation__list user-list list-unstyled">
+                <li class="user-list__item user-list__item-search ">
                     <a class="user-list__link user-list__link--active" href="#search">
                         <img class="user-list__icon-search" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
                     </a>
@@ -43,100 +46,115 @@
 
     <main class="catalog-main">
         <section class="catalog-intro">
-            <div class="catalog-intro__wrapper">
+            <div class="catalog-intro__background">
                 <h1 class="form-intro__title">Каталог товаров</h1>
             </div>
         </section>
         <section class="catalog">
-            <ul class="catalog__list">
+            <ul class="catalog__list list-unstyled">
                 <li class="catalog__item">
-                    <a href="catalog_item.html">
-                        <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Зайчик-попрыгайчик">
-                    </a>
-                    <a class="catalog__title" href="catalog_item.html">Зайчик-попрыгайчик</a>
-                    <p class="catalog__details">Рост 30 см, вес 200 г</p>
-                    <div class="catalog__buy">
-                        <p class="catalog__price">1 200 руб.</p>
-                        <a class="catalog__button" href="buy_modal.html">
-                            <img src="https://via.placeholder.com/20x19" alt="В корзину">
+                    <div class="catalog__border">
+                        <a class="catalog__link" href="catalog_item.html">
+                            <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Зайчик-попрыгайчик">
                         </a>
+                        <div class="catalog-item__wrapper">
+                            <a class="catalog__title" href="catalog_item.html">Зайчик-попрыгайчик</a>
+                            <p class="catalog__details">Рост 30 см, вес 200 г</p>
+                            <div class="catalog__buy">
+                                <p class="catalog__price">1 200 руб.</p>
+                                <a class="catalog__button" href="buy_modal.html">
+                                    <img src="https://via.placeholder.com/20x19" alt="В корзину">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </li>
                 <li class="catalog__item">
-                    <a href="catalog_item.html">
-                        <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Корзинка для белья">
-                    </a>
-                    <a class="catalog__title" href="catalog_item.html">Корзинка для белья</a>
-                    <p class="catalog__details">Диаметр 15 см, высота 10 см</p>
+                    <div class="catalog__border">
+                        <a href="catalog_item.html">
+                            <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Корзинка для белья">
+                        </a>
+                        <div class="catalog-item__wrapper">
+                            <a class="catalog__title" href="catalog_item.html">Корзинка для белья</a>
+                            <p class="catalog__details">Диаметр 15 см, высота 10 см</p>
+                            <div class="catalog__buy">
+                                <p class="catalog__price">690 руб.</p>
+                                <a class="catalog__button" href="buy_modal.html">
+                                    <img src="https://via.placeholder.com/20x19" alt="В корзину">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="catalog__item">
+                    <div class="catalog__border">
+                        <a href="catalog_item.html">
+                            <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Большая корзинка для игрушек">
+                        </a>
+                        <div class="catalog-item__wrapper">
+                            <a href="catalog_item.html" class="catalog__title">Большая корзинка для игрушек</a>
+                            <p class="catalog__details">Диаметр 30 см, высота 30 см</p>
 
-                    <div class="catalog__buy">
-                        <p class="catalog__price">690 руб.</p>
-                        <a class="catalog__button" href="buy_modal.html">
-                            <img src="https://via.placeholder.com/20x19" alt="В корзину">
-                        </a>
-                    </div>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog_item.html">
-                        <img class="catalog__image" src="https://via.placeholder.com/260x195" alt="Большая корзинка для игрушек">
-                    </a>
-                    <a href="catalog_item.html">
-                        <p class="catalog__title">Большая корзинка для игрушек</p>
-                    </a>
-                    <p class="catalog__details">Диаметр 30 см, высота 30 см</p>
-                    <div class="catalog__buy">
-                        <p class="catalog__price">1 500 руб.</p>
-                        <a class="catalog__button" href="buy_modal.html">
-                            <img src="https://via.placeholder.com/20x19" alt="В корзину">
-                        </a>
+                            <div class="catalog__buy">
+                                <p class="catalog__price">1 500 руб.</p>
+                                <a class="catalog__button" href="buy_modal.html">
+                                    <img src="https://via.placeholder.com/20x19" alt="В корзину">
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </li>
             </ul>
         </section>
 
         <section class="catalog__process process">
-            <div class="process__header">
-                <img class="process__image" src="https://via.placeholder.com/32x22" alt="Видео">
-                <p class="process__title">Процесс производства</p>
+            <div class="process__border">
+                <div class="process__header">
+                    <img class="process__image" src="https://via.placeholder.com/32x22" alt="Видео">
+                    <p class="process__title">Процесс производства</p>
+                </div>
+                <div class="process__video">
+                    <img class="process__image" src="https://via.placeholder.com/260x150" alt="Видео процесса производства">
+                    <img class="process__image-player" src="https://via.placeholder.com/101x77" alt="Посмотреть видео">
+                </div>
+                <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+                <div class="process__action">
+                    <a class="process__button button" href="#">Сделать заказ</a>
+                </div>
             </div>
-            <div class="process__video">
-                <img class="process__image" src="https://via.placeholder.com/260x150" alt="Видео процесса производства">
-                <img class="process__image-player" src="https://via.placeholder.com/101x77" alt="Посмотреть видео">
-            </div>
-
-            <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a href="#">Сделать заказ</a>
         </section>
     </main>
 
     <footer class="page-footer">
         <div class="page-footer__social social">
-            <a class="logo" href="#"></a>
-            <ul class="social__list">
-                <li class="social__item">
-                    <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
-                        Мы в Вконтакте
-                        <img class="social__link--instagram-icon" src="https://via.placeholder.com/22x21">
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
-                        Мы в Фейсбуке
-                        <img class="social__link--facebook-icon" src="https://via.placeholder.com/15x28">
-                    </a>
-                </li>
-                <li class="social__item">
-                    <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
-                        Мы в Твиттере
-                        <img class="social__link--twitter-icon" src="https://via.placeholder.com/23x20">
-                    </a>
-                </li>
-            </ul>
+            <a class="page-footer__logo logo" href="#">
+                <img class="visually-hidden" src="https://via.placeholder.com/101x34" alt="Магазин товаров ручной работы «Мишка»">
+            </a>
+            <div class="social__wrapper">
+                <ul class="social__list list-unstyled">
+                    <li class="social__item">
+                        <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+                            <img class="social__link--instagram-icon" src="https://via.placeholder.com/22x21" alt="Мы в Вконтакте">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+                            <img class="social__link--facebook-icon" src="https://via.placeholder.com/15x28" alt="Мы в Фейсбуке">
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+                            <img class="social__link--twitter-icon" src="https://via.placeholder.com/23x20" alt="Мы в Твиттере">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
             <div class="page-footer__copyright copyright">
                 <p class="copyright__text">Разработано:</p>
+
                 <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-                    <span>HTML Academy</span>
-                    <img class="copyright__htmlacademy-icon" src="https://via.placeholder.com/27x31">
+                    <img class="copyright__htmlacademy-icon" src="https://via.placeholder.com/27x31" alt="HTML Academy">
                 </a>
             </div>
         </div>
