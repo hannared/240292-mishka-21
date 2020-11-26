@@ -1,6 +1,11 @@
 .bestseller {
   margin-bottom: 31px;
 }
+
+.bestseller__wrapper {
+  .wrapper();
+}
+
 .bestseller__title {
   font-size: 25px;
   line-height: 30px;
@@ -23,8 +28,9 @@
 }
 
 .bestseller__list {
-  padding: 0;
+  .list-unstyled();
 }
+
 .bestseller__item {
   font-size: 15px;
   line-height: 20px;
@@ -33,6 +39,7 @@
   border-bottom: solid @light-grey1 1px;
   margin-bottom: 28px;
 }
+
 .bestseller__image {
   margin-bottom: 25.5px;
 }
@@ -51,15 +58,12 @@
   width: 260px;
   height: 52px;
   font-size: 18px;
-
 }
 
 .bestseller__line {
   width: 320px;
   height: 6px;
-  background-image: url(../img/zigzag-line-desktop.png);
+  background-image: url("../img/zigzag-line-desktop.png");
   background-repeat: repeat;
   display: inline-block;
 }
-
-
