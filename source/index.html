@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Магазин товаров ручной работы «Мишка»</title>
-
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,38 +12,48 @@
 <body class="page">
     <div class="page__wrapper">
         <header class="page-header header">
-            <a class="header__logo logo" title="Магазин товаров ручной работы «Мишка»">
-                <img class="logo__img" src="https://via.placeholder.com/86x35">
-            </a>
             <nav class="main-navigation">
+                <div class="header-logo logo">
+                    <a class="logo__link">
+                        <img class="logo__img" src="https://via.placeholder.com/86x35" width="86" height="35" alt="Магазин товаров ручной работы «Мишка»">
+                    </a>
+                </div>
                 <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
                 </button>
                 <ul class="main-navigation__list navigation-list">
                     <li class="navigation__item">
-                        <a class="navigation__link navigation__link--active" href="catalog.html">
-              Каталог товаров
-            </a>
+                        <a class="navigation__link navigation__link--active" href="catalog.html">Каталог товаров</a>
                     </li>
                     <li class="navigation__item">
-                        <a class="navigation__link" href="service.html">
-              Вязание на заказ
-            </a>
+                        <a class="navigation__link" href="service.html">Вязание на заказ</a>
                     </li>
                 </ul>
+
                 <ul class="main-navigation__list user-list">
-                    <li class="user-list__item user-list__item-search ">
+                    <li class="user-list__item user-list__item-search">
                         <a class="user-list__link user-list__link--active" href="#search">
-                            <img class="user-list__icon-search" src="https://via.placeholder.com/18x18"> <span>Поиск по сайту</span>
+                            <img class="user-list__icon-search" src="https://via.placeholder.com/18x18"> <span class="user-list__text">Поиск по сайту</span>
                         </a>
                     </li>
                     <li class="user-list__item user-list__item-cart">
                         <a class="user-list__link" href="cart.html">
-                            <img class="user-list__icon-cart" src="https://via.placeholder.com/21x18"><span>Корзина: пока пуста</span>
+                            <img class="user-list__icon-cart" src="https://via.placeholder.com/21x18"><span>Корзина: пока
+                пуста</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-
+            <nav class="additional-navigation">
+                <ul class="additional-navigation__list">
+                    <li class="additional-navigation__item">
+                        <a href="#new">Новые поступления</a>
+                    </li>
+                    <li class="additional-navigation__item">
+                        <a href="#sale">Распродажа</a>
+                    </li>
+                </ul>
+                <div class="additional-navigation__info">Бесплатная доставка по России</div>
+            </nav>
         </header>
     </div>
     <main class="page-main">

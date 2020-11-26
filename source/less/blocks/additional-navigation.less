@@ -1,0 +1,30 @@
+.additional-navigation {
+  @media(max-width: @mobile-width-only) {
+    display: none;
+  }
+
+  @media(min-width: @tablet-width) {
+    .wrapper-big();
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.additional-navigation__list {
+  .list-unstyled();
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.additional-navigation__item a {
+  font-size: 15px;
+  font-weight: 700;
+  color: @black;
+}
+
+.additional-navigation__info {
+  font-size: 15px;
+  color: @dark-grey1;
+}
