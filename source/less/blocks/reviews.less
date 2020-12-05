@@ -11,6 +11,16 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .reviews__text {
@@ -18,11 +28,27 @@
   font-size: 15px;
   line-height: 30px;
   color: @dark-grey1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__username {
   font-weight: 700;
   margin: 0 0 19px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__nickname {
