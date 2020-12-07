@@ -8,6 +8,7 @@
   @media (min-width: @tablet-width) {
     .wrapper-big();
     display: grid;
+    grid-template-columns: 350px auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -17,6 +18,8 @@
 }
 
 .contacts__flag {
+  display: flex;
+
   @media (max-width: @mobile-width-only) {
     display: none;
   }
@@ -24,11 +27,13 @@
   @media (min-width: @tablet-width) {
     grid-row: 1;
     grid-column: 2;
+    justify-content: right;
   }
 
   @media (min-width: @desktop-width) {
     grid-row: 1;
     grid-column: 1;
+    justify-content: center;
   }
 }
 
