@@ -62,6 +62,9 @@
   @media (min-width: @tablet-width) {
     grid-row: 2;
     grid-column: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,6 +82,9 @@
   @media (min-width: @desktop-width) {
     grid-row: 3;
     grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
@@ -112,14 +118,17 @@
     grid-column: 1 / span 2;
     background-image: url(https://via.placeholder.com/768x457);
     background-repeat: no-repeat;
-    margin: 0 -50px;
+    margin: 0 -50px 55px -55px;
   }
 
   @media (min-width: @desktop-width) {
     grid-row: 1 / span 4;
     grid-column: 3;
+    display: flex;
+    justify-self: right;
     background-image: url(https://via.placeholder.com/527x427);
     background-repeat: no-repeat;
+    margin: 0;
   }
 }
 
@@ -129,14 +138,39 @@
   @media (min-width: @tablet-width) {
     grid-row: 4;
     grid-column: 1 / span 2;
+    display: flex;
+    justify-content: center;
   }
 
   @media (min-width: @desktop-width) {
     grid-row: 4;
     grid-column: 2;
+    display: flex;
+    justify-content: left;
   }
 }
 
 .contacts__button {
   font-size: 18px;
+  display: inline-block;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    width: 288px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 288px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+  }
+
+
+
 }
