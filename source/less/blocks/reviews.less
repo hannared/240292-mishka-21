@@ -5,6 +5,8 @@
 .reviews__wrapper {
   .wrapper();
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
 
   @media (min-width: @tablet-width) {
     .wrapper-big();

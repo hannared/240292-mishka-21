@@ -4,10 +4,12 @@
 
 .contacts__wrapper {
   .wrapper();
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
 
   @media (min-width: @tablet-width) {
     .wrapper-big();
-    display: grid;
     grid-template-columns: 350px auto;
   }
 
@@ -42,6 +44,8 @@
   line-height: 30px;
   font-weight: 700;
   margin: 0 0 33px 0;
+  grid-column: 1 span / 2;
+  grid-row: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
@@ -59,6 +63,11 @@
 }
 
 .contacts__online {
+  grid-row: 2;
+  grid-column: 1;
+  display: flex;
+  justify-content: space-between;
+
   @media (min-width: @tablet-width) {
     grid-row: 2;
     grid-column: 1;
@@ -74,6 +83,11 @@
 }
 
 .contacts__offline {
+  grid-row: 3;
+  grid-column: 1;
+  display: flex;
+  justify-content: space-between;
+
   @media (min-width: @tablet-width) {
     grid-row: 2;
     grid-column: 2;
@@ -111,7 +125,7 @@
 }
 
 .contacts__map {
-  margin-bottom: 42px;
+  margin: 0 -30px 42px -30px;
 
   @media (min-width: @tablet-width) {
     grid-row: 3;
