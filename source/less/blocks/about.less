@@ -33,13 +33,25 @@
   }
 }
 
+.about__list {
+  .list-unstyled();
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
 .about__item {
   line-height: 20px;
   font-weight: 700;
   margin-bottom: 30px;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+
 
   &:last-child {
     margin-bottom: 0;
@@ -56,27 +68,37 @@
   }
 }
 
-.about__list {
-  .list-unstyled();
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.about__item--flower {
+  grid-column: 1;
+  grid-row: 1;
 }
 
-.about__right {
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
+.about__item--money {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-.about__left {
-  @media (min-width: @tablet-width) {
-    width: 50%;
-  }
+.about__item--heart {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.about__item--knitt {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.about__item--rocket {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.about__item--gift {
+  grid-column: 2;
+  grid-row: 3;
 }
 
 .about__image {
+  display: flex;
   width: 100%;
 }
