@@ -4,16 +4,13 @@
 
 .reviews__wrapper {
   .wrapper();
+  display: grid;
 
   @media (min-width: @tablet-width) {
     .wrapper-big();
-
-    display: grid;
     grid-template-columns: auto 175px;
-
     background-image: url("../img/review-2.png");
     background-repeat: no-repeat;
-
     min-height: 457px;
   }
 
