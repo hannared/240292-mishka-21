@@ -10,10 +10,6 @@
   }
 }
 
-.bestseller__main {
-  margin-bottom: 36px;
-}
-
 .bestseller__title {
   margin: 0;
   font-size: 25px;
@@ -66,9 +62,12 @@
   }
 }
 
-.bestseller__container {
+.bestseller__main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr);
+
   @media (min-width: @tablet-width) {
-    display: grid;
     width: 100%;
     grid-template: auto / 292px auto auto;
     column-gap: 42px;
