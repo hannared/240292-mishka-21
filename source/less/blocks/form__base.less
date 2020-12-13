@@ -1,11 +1,34 @@
 .form__base-type() {
   border: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto;
+  }
 }
 
 .form__base-type-title() {
   display: flex;
   align-items: center;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #63d1bb;
+    display: inline-block;
+  }
+
+  @media (min-width: @tablet-width) {
+    align-items: flex-start;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .form__base-type-text() {
@@ -13,12 +36,7 @@
   font-weight: 700;
   color: @light-green1;
   text-transform: uppercase;
-}
-
-.form__base-type-line() {
-  width: 100%;
-  height: 1px;
-  background-color: @light-green1;
+  padding-right: 25px;
 }
 
 .form__base-type-item() {

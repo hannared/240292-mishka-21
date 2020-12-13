@@ -1,5 +1,13 @@
 .form__color {
   .form__base-type;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 175px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 175px auto;
+  }
 }
 
 .color__title {
@@ -10,12 +18,19 @@
   .form__base-type-text;
 }
 
-.color__line {
-  .form__base-type-line;
-}
-
 .color__list {
+  display: grid;
   .list-unstyled();
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
 }
 
 .color__item {
