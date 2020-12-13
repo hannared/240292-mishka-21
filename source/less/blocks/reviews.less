@@ -4,12 +4,12 @@
 
 .reviews__wrapper {
   .wrapper();
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
 
   @media (min-width: @tablet-width) {
-    .wrapper-big();
     grid-template-columns: auto 175px;
     background-image: url("../img/review-2.png");
     background-repeat: no-repeat;

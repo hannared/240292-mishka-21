@@ -4,12 +4,12 @@
 
 .contacts__wrapper {
   .wrapper();
+
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
 
   @media (min-width: @tablet-width) {
-    .wrapper-big();
     grid-template-columns: 350px auto;
   }
 
@@ -159,7 +159,6 @@
   @media (min-width: @desktop-width) {
     grid-row: 4;
     grid-column: 2;
-    display: flex;
     justify-content: left;
   }
 }
@@ -173,12 +172,6 @@
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
-    width: 288px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-
-  @media (min-width: @desktop-width) {
     width: 288px;
     padding-top: 16px;
     padding-bottom: 16px;

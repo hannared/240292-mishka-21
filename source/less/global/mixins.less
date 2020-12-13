@@ -1,0 +1,35 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-unstyled() {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.wrapper-big() {
+  padding: 0 50px;
+}
+
+.wrapper() {
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    .wrapper-big();
+  }
+}
+
+.wrapper-margin-big() {
+  padding: 0;
+  margin: 0 50px;
+}
