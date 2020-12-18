@@ -3,6 +3,12 @@
   background-image: url("../img/hero-mobile1.png");
   background-repeat: no-repeat;
   height: 283px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    margin-top: -70px;
+  }
 }
 
 .intro__title {
@@ -10,4 +16,15 @@
   line-height: 30px;
   font-weight: 700;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }

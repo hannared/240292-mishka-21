@@ -4,6 +4,10 @@
 
 .about__wrapper {
   .wrapper();
+
+  @media (min-width: @desktop-width) {
+    padding: 0 175px;
+  }
 }
 
 .about__title {
@@ -11,18 +15,91 @@
   line-height: 30px;
   font-weight: 700;
   margin-bottom: 28px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.about__list {
+  .list-unstyled();
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, auto);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
 }
 
 .about__item {
   line-height: 20px;
   font-weight: 700;
   margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+
 
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
-.about__list {
-  .list-unstyled();
+.about__item--flower {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+}
+
+.about__item--money {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+}
+
+.about__item--heart {
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+}
+
+.about__item--knitt {
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.about__item--rocket {
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.about__item--gift {
+  @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+.about__image {
+  display: flex;
+  width: 100%;
 }

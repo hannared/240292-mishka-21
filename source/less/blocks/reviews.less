@@ -4,6 +4,17 @@
 
 .reviews__wrapper {
   .wrapper();
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: auto 175px;
+    background-image: url("../img/review-2.png");
+    background-repeat: no-repeat;
+    min-height: 457px;
+  }
 }
 
 .reviews__title {
@@ -11,6 +22,19 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+
+  @media (min-width: @tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-left: 175px;
+  }
 }
 
 .reviews__text {
@@ -18,20 +42,55 @@
   font-size: 15px;
   line-height: 30px;
   color: @dark-grey1;
+
+  @media (min-width: @tablet-width) {
+    font-size: 17px;
+    grid-row: 2;
+    grid-column: 1 / span 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+    margin-left: 175px;
+  }
+}
+
+.reviews__user {
+  @media (min-width: @tablet-width) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 175px;
+  }
+}
+
+.reviews__toggle {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 3;
+    grid-column: 2;
+  }
 }
 
 .reviews__username {
   font-weight: 700;
   margin: 0 0 19px 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 17px;
+  }
 }
 
 .reviews__nickname {
   line-height: 30px;
   margin: 0 0 30px 0;
-}
-
-.reviews__toggle {
-  display: flex;
 }
 
 .reviews__prev {
@@ -52,10 +111,19 @@
 
 .reviews__actions {
   margin-bottom: 45px;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 1;
+    grid-column: 2;
+  }
 }
 
 .reviews__button {
   font-size: 18px;
+  display: inline-block;
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .reviews__line {
