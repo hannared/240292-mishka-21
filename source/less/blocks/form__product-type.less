@@ -1,5 +1,13 @@
 .product-type {
   .form__base-type;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 175px auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 175px auto;
+  }
 }
 
 .product-type__title {
@@ -8,10 +16,6 @@
 
 .product-type__text {
   .form__base-type-text;
-}
-
-.product-type__line {
-  .form__base-type-line;
 }
 
 .product-type__list {
