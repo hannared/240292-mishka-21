@@ -2,13 +2,15 @@
   display: grid;
   justify-content: left;
   grid-template-columns: 47px 1fr;
+  grid-template-rows: 79px repeat(5, auto);
   align-items: center;
 
   @media (min-width: @tablet-width) {
     .wrapper();
 
     margin-bottom: 20px;
-    grid-template-columns: 2fr 2fr 1fr 1fr 3fr;
+    grid-template-columns: 166px 152px 82px 82px auto;
+    grid-template-rows: 88px 65px;
   }
 
   @media (min-width: @desktop-width) {
@@ -18,8 +20,6 @@
 }
 
 .header-logo {
-  height: 79px;
-
   display: flex;
   align-items: center;
   position: relative;
@@ -48,6 +48,11 @@
 .logo__img {
   width: 86px;
   height: 35px;
+
+  @media (min-width: @tablet-width) {
+    width: 113px;
+    height: 46px;
+  }
 }
 
 .main-navigation--opened .main-navigation__toggle {
@@ -173,6 +178,10 @@
   font-weight: 700;
   color: @black;
   padding-left: 25px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0px;
+  }
 }
 
 .user-list__item--search {
@@ -196,7 +205,10 @@
 .additional-navigation__item {
   display: flex;
   justify-content: left;
-  padding-left: 25px;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 25px;
+  }
 }
 
 .nav__menu {
@@ -209,13 +221,21 @@
 }
 
 .nav__menu--last {
-  border-bottom: 1px solid #ECECEC;
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid #ECECEC;
+  }
+
 }
 
 .user-list__icon {
   padding-left: 25px;
-}
 
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    justify-content: center;
+    display: flex;
+  }
+}
 
 .additional-navigation__info {
   font-size: 15px;
