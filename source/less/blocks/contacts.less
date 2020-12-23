@@ -10,11 +10,11 @@
   grid-template-rows: repeat(5, auto);
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 350px auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
     grid-template-columns: 175px 350px auto;
   }
 }
@@ -140,8 +140,6 @@
 }
 
 .contacts__action {
-  .wrapper();
-
   @media (min-width: @tablet-width) {
     grid-row: 4;
     grid-column: 1 / span 2;
