@@ -1,14 +1,22 @@
+.intro {
+  @media (min-width: @tablet-width) {}
+}
+
 .intro__background {
-  .wrapper();
-  background-image: url("../img/hero-mobile1.png");
+  background-image: url("../img/header-mobile.png");
   background-repeat: no-repeat;
-  height: 283px;
+  height: 373px;
 
   @media (min-width: @tablet-width) {
-    font-size: 43px;
-    line-height: 50px;
-    // TODO:
-    // margin-top: -70px;
+    background-image: url("../img/header-tablet.png");
+    background-repeat: no-repeat;
+    height: 746px;
+    margin-top: -95px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/header-desktop.png");
+    background-repeat: no-repeat;
   }
 }
 

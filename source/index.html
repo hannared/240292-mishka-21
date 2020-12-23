@@ -14,8 +14,11 @@
     <nav class="main-navigation main-navigation--opened">
       <div class="header-logo logo">
         <a class="logo__link">
-          <img class="logo__img" src="./img/mishka-logo-tablet.svg" width="113" height="46"
-            alt="Магазин товаров ручной работы «Мишка»" />
+          <picture>
+            <source media="(min-width: 1140px)" srcset="./img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+            <img src="./img/logo-mobile.svg" width="85" height="36" alt="Магазин товаров ручной работы «Мишка»">
+          </picture>
         </a>
       </div>
 
@@ -71,33 +74,34 @@
     <section class="intro">
       <div class="intro__background">
         <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
-      </div>
-    </section>
-
-    <section class="catalog-navigation">
-      <div class="catalog-navigation__wrapper">
-        <h2 class="visually-hidden">Каталог</h2>
-        <ul class="catalog-navigation__list">
-          <li class="catalog-navigation__item catalog-navigation__item--interior">
-            <a class="catalog-navigation__link" href="interior.html">
-              <div class="catalog-navigation__lamp">
-                <span>Предметы интерьера</span>
-                <img class="catalog-navigation__icon-lamp" src="https://via.placeholder.com/40x62">
-              </div>
-            </a>
-          </li>
-          <li class="catalog-navigation__item catalog-navigation__item--toys">
-            <a class="catalog-navigation__link" href="toys.html">
-              <div class="catalog-navigation__toys ">
-                <span>Детские игрушки</span>
-                <img class="catalog-navigation__icon-block" src="https://via.placeholder.com/60x60">
-              </div>
-            </a>
-          </li>
-        </ul>
+        <section class="catalog-navigation">
+          <div class="catalog-navigation__wrapper">
+            <h2 class="visually-hidden">Каталог</h2>
+            <ul class="catalog-navigation__list">
+              <li class="catalog-navigation__item catalog-navigation__item--interior">
+                <a class="catalog-navigation__link" href="interior.html">
+                  <div class="catalog-navigation__lamp">
+                    <span class="catalog-navigation__text">Предметы интерьера</span>
+                    <img class="catalog-navigation__icon-lamp" src="https://via.placeholder.com/40x62">
+                  </div>
+                </a>
+              </li>
+              <li class="catalog-navigation__item catalog-navigation__item--toys">
+                <a class="catalog-navigation__link" href="toys.html">
+                  <div class="catalog-navigation__toys">
+                    <span class="catalog-navigation__text">Детские игрушки</span>
+                    <img class="catalog-navigation__icon-block" src="https://via.placeholder.com/60x60">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
       </div>
       <div class="catalog-navigation__zigzag"></div>
     </section>
+    </section>
+
+
 
     <section class="bestseller">
       <div class="bestseller__wrapper">
