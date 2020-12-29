@@ -3,20 +3,35 @@
 }
 
 .intro__background {
-  background-image: url("../img/header-mobile.png");
-  background-repeat: no-repeat;
   height: 373px;
+  background-image: url("../img/header-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/header-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
-    background-image: url("../img/header-tablet.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/header-tablet.jpg");
     height: 746px;
     margin-top: -95px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    background-image: url("../img/header-desktop.png");
-    background-repeat: no-repeat;
+    background-image: url("../img/header-desktop.jpg");
+    height: 746px;
+    margin-top: -95px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-desktop@2x.jpg");
+    }
   }
 }
 
