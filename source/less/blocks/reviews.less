@@ -11,9 +11,23 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: auto 175px;
-    background-image: url("../img/review-2.png");
+    background-image: url("../img/review-tablet.jpg");
     background-repeat: no-repeat;
     min-height: 457px;
+    background-position: left;
+    background-size: 350px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/review-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review-desktop@2x.jpg");
+    }
   }
 }
 
