@@ -11,11 +11,12 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
-  margin-bottom: 40px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,14 +42,10 @@
   }
 }
 
-.about__image {
-  height: min-content;
-}
-
 .about__item {
   line-height: 20px;
   font-weight: 700;
-  margin-bottom: 57px;
+  margin-bottom: 37px;
   flex-wrap: wrap;
   display: flex;
   align-content: baseline;
@@ -64,45 +61,109 @@
 }
 
 .about__item--flower {
+  margin-bottom: 30px;
+
   @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 2;
     grid-row: 1;
   }
+}
+
+.about__item-icon--flower {
+  margin-bottom: 15px;
 }
 
 .about__item--money {
   @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 2;
     grid-row: 2;
   }
 }
 
+.about__item-icon--money {
+  margin-bottom: 25px;
+}
+
 .about__item--heart {
+  margin-bottom: 30px;
+
   @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 2;
     grid-row: 3;
   }
 }
 
+.about__item-icon--heart {
+  margin-bottom: 22px;
+}
+
 .about__item--knitt {
+  margin-bottom: 32px;
+
   @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 3;
     grid-row: 1;
   }
 }
 
+.about__item-icon--knitt {
+  margin-bottom: 19px;
+}
+
 .about__item--rocket {
+  margin-bottom: 33px;
+
   @media (min-width: @tablet-width) {
+    margin-bottom: 60px;
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 3;
     grid-row: 2;
   }
 }
 
+.about__item-icon--rocket {
+  margin-bottom: 25px;
+}
+
 .about__item--gift {
   @media (min-width: @tablet-width) {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 3;
     grid-row: 3;
   }
+}
+
+.about__item-icon--gift {
+  margin-bottom: 20px;
 }
 
 .about__image {
@@ -110,7 +171,7 @@
   width: 100%;
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 17px;
+    margin-bottom: 0px;
   }
 
 }
