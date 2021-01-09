@@ -1,7 +1,3 @@
-.intro {
-  @media (min-width: @tablet-width) {}
-}
-
 .intro__background {
   height: 373px;
   background-image: url("../img/header-mobile.jpg");
@@ -24,7 +20,7 @@
     background-image: url("../img/header-tablet.jpg");
     height: 746px;
     margin-top: -86px;
-    border-top: 1px solid #ECECEC;
+    border-top: 1px solid @light-grey1;
     background-size: 768px auto;
 
     @media (min-resolution: 2dppx) {
@@ -70,7 +66,7 @@
   line-height: 30px;
   font-weight: 700;
   text-align: center;
-  margin-top: 0px;
+  margin-top: 0;
   padding-top: 73px;
 
   @media (max-width: @mobile-width-only) {
