@@ -34,12 +34,16 @@
   }
 }
 
-.page-footer__social {
+.copyright__link {
+  height: 35px;
+  width: 27px;
+}
 
+.page-footer__social {
   padding-top: 25px;
   padding-bottom: 22px;
   border-bottom: solid @light-grey3 1px;
-  margin-bottom: 18px;
+  margin-bottom: 21px;
   display: flex;
   justify-content: center;
 
@@ -57,6 +61,10 @@
   align-items: center;
   width: 180px;
   margin: 0 auto;
+
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 25px;
+  }
 
   @media (min-width: @tablet-width) {
     margin: 0;
