@@ -50,8 +50,7 @@
 }
 
 /* box */
-
-.color__checkbox+label {
+.color__checkbox + label {
   &::before {
     content: "";
     position: absolute;
@@ -63,10 +62,8 @@
   }
 }
 
-
-/* arrow 1 */
-
-.color__checkbox:checked+label>span {
+.color__checkbox:checked + label > span {
+  /* arrow 1 */
   &::before {
     content: "";
     position: absolute;
@@ -76,19 +73,14 @@
     height: 12px;
     transform: rotate(-45deg);
     background-color: @black;
-
   }
-}
 
-
-/* arrow 2 */
-
-.color__checkbox:checked+label>span {
+  /* arrow 2 */
   &::after {
     content: "";
     position: absolute;
     left: -39px;
-    bottom: 0px;
+    bottom: 0;
     width: 2px;
     height: 22px;
     transform: rotate(45deg);
