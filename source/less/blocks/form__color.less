@@ -24,12 +24,11 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
