@@ -1,8 +1,21 @@
+.form__container {
+  @media (min-width: @tablet-width) {
+    background-color: @light-grey2;
+  }
+}
+
 .form__color {
   .form__base-type;
+  .wrapper();
+
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
+    padding: 66px 0;
+    background-color: @light-grey2;
     grid-template-columns: 175px auto;
+    padding-bottom: 10px;
+    margin-bottom: 66px;
   }
 
   @media (min-width: @desktop-width) {
@@ -25,7 +38,9 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 76px 76px 76px;
+    grid-column-gap: 30px;
+    grid-row-gap: 0px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,21 +51,30 @@
 
 .color__item {
   .form__base-type-item;
-  margin-left: 58px;
-  margin-bottom: 43px;
+
+  margin-left: 60px;
+  margin-bottom: 26px;
   display: block;
 
   &:last-child {
-    margin-bottom: 44px;
+    margin-bottom: 0px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }
 
 .color__item label {
   position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 16px;
+  }
 }
 
 /* box */
-.color__checkbox + label {
+.color__checkbox+label {
   &::before {
     content: "";
     position: absolute;
@@ -59,10 +83,18 @@
     width: 34px;
     height: 34px;
     border: 2px solid @dark-grey1;
+
+    @media (min-width: @tablet-width) {
+      left: -65px;
+      top: -11px;
+      width: 47px;
+      height: 47px;
+    }
   }
 }
 
-.color__checkbox:checked + label > span {
+.color__checkbox:checked+label>span {
+
   /* arrow 1 */
   &::before {
     content: "";
@@ -73,6 +105,13 @@
     height: 12px;
     transform: rotate(-45deg);
     background-color: @black;
+
+    @media (min-width: @tablet-width) {
+      left: -51px;
+      bottom: 0px;
+      width: 2px;
+      height: 15px;
+    }
   }
 
   /* arrow 2 */
@@ -85,5 +124,12 @@
     height: 22px;
     transform: rotate(45deg);
     background-color: @black;
+
+    @media (min-width: @tablet-width) {
+      left: -36px;
+      bottom: -3px;
+      width: 2px;
+      height: 28px;
+    }
   }
 }
