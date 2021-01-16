@@ -8,7 +8,7 @@
 .process__wrapper {
   display: grid;
   grid-template-columns: 1fr;
-  border: solid @light-grey1 1px;
+  border: solid @light-grey 1px;
   padding-bottom: 33px;
 
   @media (min-width: @desktop-width) {
@@ -18,11 +18,11 @@
 }
 
 .process__title {
-  font-weight: 700;
+  font-weight: @bold-weight;
   width: 50%;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    font-size: @big;
     width: 80%;
   }
 }
@@ -58,7 +58,7 @@
   display: block;
 }
 
-.process__image-player {
+.video__player {
   position: absolute;
   top: 110px;
   left: 110px;
@@ -69,12 +69,12 @@
 }
 
 .process__text {
-  font-size: 13px;
-  color: @dark-grey1;
+  font-size: @tiny;
+  color: @grey;
   margin-bottom: 41px;
 
   @media (min-width: @tablet-width) {
-    font-size: 15px;
+    font-size: @smaller;
     line-height: 30px;
     grid-row: 3;
   }
@@ -100,11 +100,11 @@
 
 .process__button {
   width: 192px;
-  font-size: 18px;
+  font-size: @normal;
   padding: 18px 11px;
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
+    font-size: @small;
     padding: 18px 205px;
   }
 

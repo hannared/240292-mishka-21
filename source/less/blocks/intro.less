@@ -3,7 +3,7 @@
   background-image: url("../img/header-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: @light-grey4;
+  background-color: @super-lighter-grey;
   position: relative;
 
   @media (max-width: @mobile-width-only) {
@@ -20,7 +20,7 @@
     background-image: url("../img/header-tablet.jpg");
     height: 746px;
     margin-top: -86px;
-    border-top: 1px solid @light-grey1;
+    border-top: 1px solid @light-grey;
     background-size: 768px auto;
 
     @media (min-resolution: 2dppx) {
@@ -62,32 +62,31 @@
 }
 
 .intro__title {
-  font-size: 27px;
+  font-size: @biggiest;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: @bold-weight;
   text-align: center;
   margin-top: 0;
   padding-top: 73px;
+  margin-bottom: 119px;
 
-  @media (max-width: @mobile-width-only) {
-    margin-bottom: 119px;
-  }
 
   @media (min-width: @tablet-width) {
     br {
       display: none;
     }
 
+    margin: 0 auto;
     padding-top: 156px;
-    font-size: 43px;
+    font-size: @huge;
     line-height: 50px;
     width: 70%;
-    margin: 0 auto;
     height: 470px;
+    margin-bottom: 155px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 53px;
+    font-size: @giant;
     line-height: 57px;
     width: 65%;
   }

@@ -47,15 +47,15 @@
 }
 
 .contacts__title {
-  font-size: 18px;
+  font-size: @normal;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: @bold-weight;
   margin: 0 0 27px 0;
   grid-column: 1 span / 2;
   grid-row: 1;
 
   @media (min-width: @tablet-width) {
-    font-size: 43px;
+    font-size: @huge;
     line-height: 50px;
     grid-row: 1;
     grid-column: 1;
@@ -64,7 +64,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 53px;
+    font-size: @giant;
     line-height: 57px;
     grid-row: 2;
     grid-column: 2;
@@ -118,12 +118,12 @@
 .contacts__email-text,
 .contacts__address,
 .contacts__address-text {
-  font-size: 14px;
+  font-size: @smallest;
   line-height: 30px;
-  color: @dark-grey1;
+  color: @grey;
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
+    font-size: @small;
   }
 }
 
@@ -146,7 +146,7 @@
     width: 100%;
     height: 1px;
     display: block;
-    background-color: @light-green3;
+    background-color: @lighter-green;
 
     @media (min-width: @desktop-width) {
       margin-top: 5px;
@@ -213,14 +213,14 @@
 }
 
 .contacts__button {
-  font-size: 18px;
+  font-size: @normal-weight;
   display: inline-block;
   width: 100%;
   padding-top: 14px;
   padding-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
+    font-size: @small;
     width: 230px;
     padding-top: 14px;
     padding-bottom: 14px;

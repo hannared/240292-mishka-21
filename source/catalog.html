@@ -14,14 +14,16 @@
   <header class="page-header header">
     <nav class="main-navigation main-navigation--opened">
       <div class="header-logo logo">
-        <a class="logo__link">
-          <img class="logo__img" src="https://via.placeholder.com/86x35" width="86" height="35"
-            alt="Магазин товаров ручной работы «Мишка»" />
+        <a class="logo__link" href="/">
+          <picture>
+            <source media="(min-width: 1140px)" srcset="./img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+            <img src="./img/logo-mobile.svg" width="85" height="36" alt="Магазин товаров ручной работы «Мишка»">
+          </picture>
         </a>
       </div>
 
-      <button class="main-navigation__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+      <button class="main-navigation__toggle" type="button" aria-label="Открыть меню">
       </button>
 
       <div class="user-list__icon user-list__icon--catalog nav__menu">
@@ -39,38 +41,50 @@
       </div>
 
       <div class="user-list__icon user-list__icon--search nav__menu">
-        <img class="" src="https://via.placeholder.com/18x18" width="18" height="18" />
+        <a href="/search">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.2"
+              d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z"
+              fill="black" />
+          </svg>
+        </a>
       </div>
 
       <div class="user-list__item user-list__item--search nav__menu">
-        <a class="user-list__link" href="#search">Поиск по сайту</a>
+        <a class="user-list__link" href="/search">Поиск по сайту</a>
       </div>
 
       <div class="user-list__icon user-list__icon--cart nav__menu nav__menu--last">
-        <img class="" src="https://via.placeholder.com/21x18" width="21" height="18" />
+        <a href="/cart">
+          <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.2"
+              d="M20.1884 6.85716H16.6377L13.1884 0.380944C12.9855 -8.61287e-06 12.5797 -0.0952351 12.1739 0.0952412C11.7681 0.285717 11.6667 0.66667 11.8696 1.04762L15.0145 6.85716H5.7826L8.92753 1.04762C9.13043 0.66667 8.92754 0.285717 8.6232 0.0952412C8.2174 -0.0952351 7.8116 0.0952295 7.6087 0.380944L4.1594 6.85716H0.811583C0.405785 6.85716 0 7.14286 0 7.61905C0 8 0.304336 8.38094 0.811583 8.38094H1.01449L1.92753 11.2381C1.72463 11.3333 1.62317 11.5238 1.62317 11.8095C1.62317 12.1905 1.92753 12.4762 2.33332 12.4762L4.05797 18H16.942L18.6667 12.4762C19.0725 12.4762 19.3768 12.1905 19.3768 11.8095C19.3768 11.619 19.2754 11.3333 19.0725 11.2381L19.9855 8.38094H20.1884C20.5942 8.38094 21 8.09524 21 7.61905C21 7.14286 20.5942 6.85716 20.1884 6.85716ZM15.6232 16.4762H5.07247L3.85506 12.381H16.942L15.6232 16.4762ZM17.2464 10.9524H3.34782L2.53623 8.28573H18.058L17.2464 10.9524Z"
+              fill="black" />
+          </svg>
+        </a>
       </div>
 
       <div class="user-list__item user-list__item--cart nav__menu nav__menu--last">
-        <a class="user-list__link" href="cart.html">Корзина: пока пуста</a>
+        <a class="user-list__link" href="/cart">Корзина: пока пуста</a>
       </div>
 
       <div class="additional-navigation__item additional-navigation__item--new">
-        <a href="#new">Новые поступления</a>
+        <a href="/new">Новые поступления</a>
       </div>
 
       <div class="additional-navigation__item additional-navigation__item--sale">
-        <a href="#sale">Распродажа</a>
+        <a href="/sale">Распродажа</a>
       </div>
 
-      <div class="additional-navigation__info">
+      <span class="additional-navigation__info">
         Бесплатная доставка по России
-      </div>
+      </span>
     </nav>
   </header>
 
   <main class="catalog-main">
-    <section class="catalog-intro">
-      <div class="catalog-intro__background">
+    <section class="form-intro">
+      <div class="form-intro__backgroud">
         <h1 class="form-intro__title">Каталог товаров</h1>
       </div>
     </section>
@@ -138,9 +152,9 @@
           <img class="process__image" src="https://via.placeholder.com/32x22" alt="Видео">
           <p class="process__title">Процесс производства</p>
         </div>
-        <div class="process__video">
-          <img class="process__image" src="https://via.placeholder.com/680x455" alt="Видео процесса производства">
-          <img class="process__image-player" src="https://via.placeholder.com/101x77" alt="Посмотреть видео">
+        <div class="process__video video">
+          <img class="video__image" src="https://via.placeholder.com/680x455" alt="Видео процесса производства">
+          <img class="video__player" src="https://via.placeholder.com/101x77" alt="Посмотреть видео">
         </div>
         <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
           появляются наши товары.</p>
@@ -154,36 +168,36 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <a href="#">
-          <img class="page-footer__image" src="https://via.placeholder.com/101x34"
+        <a href="/">
+          <img class="page-footer__image" src="./img/logo-footer.svg" width="101" height="34"
             alt="Магазин товаров ручной работы «Мишка»">
         </a>
       </div>
 
       <div class="page-footer__social">
-        <ul class="social__list">
+        <ul class="social__list social">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
-              <img class="social__link--instagram-icon" src="https://via.placeholder.com/22x21" alt="Мы в Вконтакте">
+              <img src="./img/insta.svg" alt="Мы в Инстаграм">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
-              <img class="social__link--facebook-icon" src="https://via.placeholder.com/15x28" alt="Мы в Фейсбуке">
+              <img src="./img/fb.svg" alt="Мы в Фейсбуке">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
-              <img class="social__link--twitter-icon" src="https://via.placeholder.com/23x20" alt="Мы в Твиттере">
+              <img src="./img/twitter.svg" alt="Мы в Твиттере">
             </a>
           </li>
         </ul>
       </div>
 
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано:</p>
+        <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__htmlacademy-icon" src="https://via.placeholder.com/27x31" alt="HTML Academy">
+          <img class="copyright__icon" src="./img/htmlacademy.svg" alt="HTML Academy">
         </a>
       </div>
     </div>

@@ -28,7 +28,14 @@
 }
 
 .contact-details__field {
-  .contact__field();
+  <<<<<<< HEAD .contact__field();
+  =======.contact__field;
+
+  &:last-child {
+    border: solid @grey 2px;
+  }
+
+  >>>>>>>module5-task1
 }
 
 .contact-details__item {
@@ -72,13 +79,13 @@
 }
 
 .contact-details__note {
-  font-size: 14px;
+  font-size: @smallest;
   line-height: 16px;
   color: @dark-grey1;
   margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
+    font-size: @small;
     line-height: 30px;
     order: 2;
     align-self: center;
@@ -95,7 +102,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 4;
   }
 
   .form__button {

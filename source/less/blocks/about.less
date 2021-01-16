@@ -15,19 +15,19 @@
 }
 
 .about__title {
-  font-size: 25px;
+  font-size: @bigger;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: @bold-weight;
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
-    font-size: 43px;
+    font-size: @huge;
     line-height: 50px;
     margin-bottom: 39px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 53px;
+    font-size: @giant;
     line-height: 57px;
     padding-left: 175px;
   }
@@ -45,13 +45,12 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 175px 350px 350px;
-    grid-template-rows: repeat(3, auto);
   }
 }
 
 .about__item {
   line-height: 20px;
-  font-weight: 700;
+  font-weight: @bold-weight;
   margin-bottom: 37px;
   flex-wrap: wrap;
   display: flex;
@@ -62,7 +61,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
+    font-size: @big;
     line-height: 22px;
   }
 }
@@ -78,7 +77,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 1;
   }
 }
 
@@ -94,7 +92,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 2;
   }
 }
 
@@ -112,7 +109,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 3;
   }
 }
 
@@ -130,7 +126,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 3;
-    grid-row: 1;
   }
 }
 
@@ -149,7 +144,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 3;
-    grid-row: 2;
   }
 }
 
@@ -165,7 +159,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 3;
-    grid-row: 3;
   }
 }
 
