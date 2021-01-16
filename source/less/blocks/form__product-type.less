@@ -3,7 +3,7 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 175px auto;
-    margin-bottom: 6px;
+    margin-bottom: 33px;
   }
 
   @media (min-width: @desktop-width) {
@@ -55,16 +55,14 @@
     height: 35px;
     border-radius: 50%;
     border: 2px solid @grey;
-  }
 
-  @media (min-width: @tablet-width) {
-    align-items: flex-start;
+    @media (min-width: @tablet-width) {
+      align-items: flex-start;
 
-    &::before {
       left: -57px;
       top: -15px;
-      width: 45px;
-      height: 45px;
+      width: 50px;
+      height: 50px;
     }
   }
 }
@@ -84,7 +82,7 @@
   @media (min-width: @tablet-width) {
     &::after {
       left: -42px;
-      top: -1px;
+      top: 0;
       width: 20px;
       height: 20px;
     }

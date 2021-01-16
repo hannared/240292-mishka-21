@@ -194,7 +194,7 @@
         </fieldset>
       </div>
 
-      <div class="form__wrapper">
+      <div class="form__container">
         <fieldset class="form__contact-details contact-details">
           <div class="contact-details__title">
             <div class="contact-details__text">тел</div>
@@ -219,14 +219,20 @@
               <img class="contact-details__img" src="./img/mail.svg" width="32" height="21">
             </span>
           </p>
+        </fieldset>
+      </div>
 
+      <div class="form__wrapper">
+        <fieldset class="form__contact form__contact--actions contact-details">
           <div class="contact-details__title contact-details__title--extra">
             <div class="contact-details__text">доп</div>
           </div>
 
-          <p class="contact-details__item contact-details__item--text">
-            <textarea class="contact-details__field contact-details__field--text" id="text-additional" type="text"
-              name="info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <p class="contact-details__item contact-details__item--textarea">
+            <span class="contact-details__item-text">
+              <textarea class="contact-details__field contact-details__field--text" id="text-additional" type="text"
+                name="info" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </span>
           </p>
 
           <div class="form__action">
