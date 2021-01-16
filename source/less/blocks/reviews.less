@@ -147,7 +147,7 @@
   margin-bottom: 4px;
 
   @media (min-width: @tablet-width) {
-    font-size: @normal-weight;
+    font-size: @normal;
   }
 
   @media (min-width: @desktop-width) {
@@ -167,6 +167,10 @@
   display: flex;
   justify-content: center;
 
+  @media (max-width: @mobile-width-only) {
+    align-items: center;
+  }
+
   @media (min-width: @tablet-width) {
     border: none;
   }
@@ -180,6 +184,10 @@
   margin-bottom: 37px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: @mobile-width-only) {
+    align-items: center;
+  }
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -202,7 +210,7 @@
 }
 
 .reviews__button {
-  font-size: @normal-weight;
+  font-size: @normal;
   display: inline-block;
   width: 100%;
   padding-top: 14px;
