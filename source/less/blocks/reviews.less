@@ -1,5 +1,5 @@
 .reviews {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
@@ -166,13 +166,14 @@
   border: 1px solid @light-grey;
   display: flex;
   justify-content: center;
-
-  @media (max-width: @mobile-width-only) {
-    align-items: center;
-  }
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
   }
 }
 
@@ -184,13 +185,14 @@
   margin-bottom: 37px;
   display: flex;
   justify-content: center;
-
-  @media (max-width: @mobile-width-only) {
-    align-items: center;
-  }
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-items: flex-start;
   }
 }
 
