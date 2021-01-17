@@ -37,6 +37,20 @@
   .form__base-type-text;
 }
 
+.contact-details__text--phone {
+  @media (min-width: @tablet-width) {
+    padding-right: 23px;
+  }
+}
+
+.contact-details__text--email {
+  padding-right: 23px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+  }
+}
+
 .contact-details__field {
   .contact__field();
 }
@@ -99,6 +113,10 @@
   @media (min-width: @tablet-width) {
     right: 25px;
     bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    right: 6px;
   }
 }
 

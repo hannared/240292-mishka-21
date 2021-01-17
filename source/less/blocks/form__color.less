@@ -41,11 +41,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 76px 76px 76px;
     grid-column-gap: 30px;
-    grid-row-gap: 0px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 263px);
+    grid-template-rows: 76px 76px;
+    grid-column-gap: 0;
   }
 }
 
@@ -57,7 +58,7 @@
   display: block;
 
   &:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
@@ -73,6 +74,7 @@
   }
 }
 
+/* stylelint-disable */
 /* box */
 .color__checkbox+label {
   &::before {
@@ -117,7 +119,7 @@
 
     @media (min-width: @tablet-width) {
       left: -51px;
-      bottom: 0px;
+      bottom: 0;
       width: 2px;
       height: 15px;
     }
@@ -152,3 +154,5 @@
     }
   }
 }
+
+/* stylelint-enable */
