@@ -72,12 +72,39 @@
   }
 }
 
-.main-navigation--closed .nav__menu,
-.main-navigation--opened .nav__menu {
+.main-navigation--closed .user-list__icon--catalog,
+.main-navigation--closed .navigation__item--catalog,
+.main-navigation--closed .user-list__icon--order,
+.main-navigation--closed .navigation__item--order,
+.main-navigation--closed .user-list__icon--search,
+.main-navigation--closed .user-list__icon--cart,
+.main-navigation--closed .user-list__item--cart {
   display: none;
 
   @media (min-width: @tablet-width) {
-    display: block;
+    display: flex;
+  }
+}
+
+.main-navigation--opened .user-list__icon--catalog,
+.main-navigation--opened .navigation__item--catalog,
+.main-navigation--opened .user-list__icon--order,
+.main-navigation--opened .navigation__item--order,
+.main-navigation--opened .user-list__icon--search,
+.main-navigation--opened .user-list__icon--cart,
+.main-navigation--opened .user-list__item--cart {
+  display: flex;
+}
+
+.main-navigation--closed .user-list__item--search {
+  display: none;
+}
+
+.main-navigation--opened .user-list__item--search {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
 
