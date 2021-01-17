@@ -29,6 +29,10 @@
       display: none;
     }
   }
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+  }
 }
 
 .form__base-type-text() {
@@ -37,6 +41,10 @@
   color: @green;
   text-transform: uppercase;
   padding-right: 23px;
+
+  @media (min-width: @desktop-width) {
+    padding-right: 10px;
+  }
 }
 
 .form__base-type-item() {

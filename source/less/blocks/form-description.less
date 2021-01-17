@@ -9,6 +9,11 @@
 
 .form-description__wrapper {
   .wrapper();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 175px auto 175px;
+  }
 }
 
 .form-description__text {
@@ -18,5 +23,6 @@
   @media (min-width: @tablet-width) {
     font-size: @small;
     line-height: 30px;
+    grid-column: 2;
   }
 }

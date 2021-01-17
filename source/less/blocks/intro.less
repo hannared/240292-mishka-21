@@ -1,15 +1,11 @@
 .intro__background {
-  height: 373px;
   background-image: url("../img/header-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
   background-color: @super-lighter-grey;
+  background-position: center -20px;
+  background-size: 320px auto;
+  height: 373px;
   position: relative;
-
-  @media (max-width: @mobile-width-only) {
-    background-position: center -20px;
-    background-size: 320px auto;
-  }
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/header-mobile@2x.jpg");

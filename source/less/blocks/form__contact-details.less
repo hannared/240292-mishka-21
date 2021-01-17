@@ -3,14 +3,15 @@
   .wrapper();
 
   border: none;
-  padding: 0;
   display: grid;
   grid-template-columns: 1fr;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   input,
   textarea {
-    background-color: @lighter-grey;
+    @media (min-width: @tablet-width) {
+      background-color: @lighter-grey;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -69,8 +70,8 @@
 
 .contact-details__field--text {
   height: 124px;
-  padding: 0;
-  margin: 15px;
+  margin: 0;
+  padding: 15px;
 
   border: none;
   overflow: auto;
@@ -92,8 +93,13 @@
 
 .contact-details__img {
   position: absolute;
-  right: 25px;
+  right: 5px;
   bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    right: 25px;
+    bottom: 15px;
+  }
 }
 
 .contact-details__title--extra {
@@ -116,6 +122,8 @@
 }
 
 .form__action {
+  margin-top: 3px;
+
   @media (min-width: @tablet-width) {
     grid-column: 1 / span 2;
     grid-row: 4;
