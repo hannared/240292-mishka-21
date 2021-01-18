@@ -6,7 +6,7 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: repeat(3, auto);
   }
 }
 
@@ -33,15 +33,15 @@
 
 .form__base-type-text() {
   line-height: 16px;
-  font-weight: 700;
-  color: @light-green1;
+  font-weight: @bold-weight;
+  color: @green;
   text-transform: uppercase;
   padding-right: 25px;
 }
 
 .form__base-type-item() {
   line-height: 18px;
-  font-weight: 700;
+  font-weight: @bold-weight;
   margin-bottom: 24px;
 
   &:last-child {
@@ -49,10 +49,10 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
+    font-size: @middle;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 19px;
+    font-size: @middle;
   }
 }

@@ -1,16 +1,30 @@
 .catalog__process {
   .wrapper();
   margin-bottom: 58px;
+
+  position: relative;
 }
 
-.process__border {
-  border: solid @light-grey1 1px;
+.process__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  border: solid @light-grey 1px;
   padding-bottom: 33px;
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 2fr 1fr;
+    padding-bottom: 0;
+  }
 }
 
 .process__title {
-  font-weight: 700;
+  font-weight: @bold-weight;
   width: 50%;
+
+  @media (min-width: @tablet-width) {
+    font-size: @big;
+    width: 80%;
+  }
 }
 
 .process__header {
@@ -18,28 +32,83 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1;
+    grid-column: 2;
+  }
+}
+
+.process__video {
+  @media (min-width: @tablet-width) {
+    grid-row: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 1 / span 3;
+    grid-column: 1;
+  }
 }
 
 .process__image {
-  position: relative;
+  display: block;
 }
 
-.process__image-player {
+.video__player {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 110px;
+  left: 110px;
+
+  @media (min-width: @tablet-width) {
+    top: 45px;
+  }
 }
 
 .process__text {
-  font-size: 13px;
-  color: @dark-grey1;
+  font-size: @tiny;
+  color: @grey;
   margin-bottom: 41px;
-}
 
-.process__button {
-  width: 192px;
+  @media (min-width: @tablet-width) {
+    font-size: @smaller;
+    line-height: 30px;
+    grid-row: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 2;
+    grid-column: 2;
+  }
 }
 
 .process__action {
   margin: 0 34px;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
+
+.process__button {
+  width: 192px;
+  font-size: @normal;
+  padding: 18px 11px;
+
+  @media (min-width: @tablet-width) {
+    font-size: @small;
+    padding: 18px 205px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 18px 30px;
+  }
 }

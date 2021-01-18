@@ -31,7 +31,7 @@
   .contact__field;
 
   &:last-child {
-    border: solid @dark-grey1 2px;
+    border: solid @grey 2px;
   }
 }
 
@@ -50,12 +50,12 @@
 }
 
 .contact-details__note {
-  font-size: 14px;
+  font-size: @smallest;
   line-height: 16px;
-  color: @dark-grey1;
+  color: @grey;
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
+    font-size: @small;
     line-height: 30px;
     order: 2;
     align-self: center;
@@ -72,7 +72,6 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 4;
   }
 
   .form__button {
@@ -82,7 +81,7 @@
     padding-bottom: 16px;
 
     @media (min-width: @tablet-width) {
-      font-size: 17px;
+      font-size: @small;
       width: 230px;
       order: 1;
     }

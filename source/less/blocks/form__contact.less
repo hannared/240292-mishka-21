@@ -25,7 +25,7 @@
 
 .contact__item {
   line-height: 18px;
-  font-weight: 700;
+  font-weight: @bold-weight;
   margin-bottom: 22px;
 
   &:last-child {
@@ -33,7 +33,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
+    font-size: @middle;
     display: flex;
   }
 }
@@ -64,11 +64,11 @@
   line-height: 18px;
   opacity: 0.3;
   border: none;
-  border-bottom: solid @dark-grey1 2px;
+  border-bottom: solid @grey 2px;
   padding: 17px 0;
 
   @media (min-width: @tablet-width) {
-    font-size: 19px;
+    font-size: @middle;
     padding: 0;
   }
 }

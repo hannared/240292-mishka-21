@@ -1,5 +1,37 @@
 .bestseller {
   margin-bottom: 31px;
+  margin-top: 146px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/zigzag-line-mobile.png");
+    display: block;
+    margin-top: 36px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 45px;
+    margin-bottom: 58px;
+
+    &::after {
+      height: 17px;
+      background-image: url("../img/zigzag-line-tablet.png");
+      margin-top: 25px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 57px;
+    margin-bottom: 66px;
+
+    &::after {
+      height: 23px;
+      background-image: url("../img/zigzag-line-desktop.png");
+      margin-top: 49px;
+    }
+  }
 }
 
 .bestseller__wrapper {
@@ -8,30 +40,34 @@
 
 .bestseller__title {
   margin: 0;
-  font-size: 25px;
+  font-size: @bigger;
   line-height: 30px;
-  font-weight: 700;
+  font-weight: @bold-weight;
+  margin-bottom: 4px;
 
   @media (min-width: @tablet-width) {
-    font-size: 43px;
+    font-size: @huge;
     line-height: 50px;
     grid-column: 1 / span 2;
     grid-row: 1;
+    margin-bottom: 39px;
+    margin-top: 5px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 53px;
+    font-size: @giant;
     line-height: 57px;
     grid-column: 2 / span 2;
-    padding-top: 50px;
+    padding-top: 70px;
+    margin-bottom: 33px;
   }
 }
 
 .bestseller__subtitle {
   width: 135px;
   line-height: 20px;
-  font-weight: 700;
-  color: @light-green1;
+  font-weight: @bold-weight;
+  color: @green;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
@@ -40,12 +76,15 @@
     line-height: 17px;
     grid-row: 1;
     grid-column: 3;
+    margin-top: 12px;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 1;
     width: 175px;
-    padding-top: 60px;
+    padding-top: 72px;
+    padding-right: 10px;
+    margin-left: -5px;
   }
 }
 
@@ -62,8 +101,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    grid-template: auto / 292px auto auto;
-    column-gap: 42px;
+    grid-template: auto / 292px auto 130px;
   }
 
   @media (min-width: @desktop-width) {
@@ -76,15 +114,15 @@
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 57px;
+    margin-bottom: 30px;
     grid-row: 2;
     grid-column: 1;
   }
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 2;
     width: 292px;
+    margin-bottom: 0;
   }
 }
 
@@ -92,7 +130,9 @@
   @media (min-width: @tablet-width) {
     grid-row: 2 / span 2;
     grid-column: 2 / span 2;
-    align-self: stretch;
+    display: flex;
+    justify-self: right;
+    margin-top: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -112,23 +152,24 @@
 
   @media (min-width: @desktop-width) {
     grid-column: 2;
-    grid-row: 3;
   }
 }
 
 .bestseller__description {
-  font-size: 15px;
-  color: @dark-grey1;
-  margin: 0 0 28px 0;
+  font-size: @smaller;
+  color: @grey;
+  margin-top: 18px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
+    font-size: @small;
     line-height: 30px;
-    width: 86%;
-    margin: 0 0 48px 0;
+    margin-bottom: 48px;
+    margin-top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    line-height: 30px;
+    margin-bottom: 60px;
   }
 }
 
@@ -141,14 +182,29 @@
 }
 
 .bestseller__item {
-  font-size: 15px;
+  font-size: @smaller;
   line-height: 20px;
-  color: @dark-grey1;
-  padding: 12px 0;
-  border-bottom: solid @light-grey1 1px;
+  color: @grey;
+  padding: 10px 0;
+  border-bottom: solid @light-grey 1px;
+  display: flex;
+  justify-content: space-between;
 
   &:first-child {
     padding-top: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 14px;
+  }
+}
+
+.bestseller__value {
+  width: 162px;
+
+  @media (min-width: @tablet-width) {
+    width: 195px;
   }
 }
 
@@ -157,25 +213,35 @@
   margin-bottom: 25.5px;
 }
 
+.bestseller__actions {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 24px;
+  }
+}
+
 .bestseller__price {
-  font-weight: 700;
-  margin-bottom: 24.5px;
+  font-weight: @bold-weight;
+  margin-bottom: 24px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    font-size: 20px;
-    margin: 0 0 33px;
+    font-size: @big;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 32px;
   }
 }
 
 .bestseller__button {
   display: inline-block;
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    font-size: 17px;
+    font-size: @small;
     width: 288px;
   }
 }
