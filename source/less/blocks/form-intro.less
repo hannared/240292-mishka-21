@@ -13,8 +13,15 @@
     height: 223px;
     position: relative;
     margin-bottom: 67px;
+  }
 
-    &::after {
+  @media (min-width: @desktop-width) {
+    height: 260px;
+    margin-bottom: 108px;
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
       background-image: url("/img/zigzag-fill-tablet.png");
       background-repeat: repeat;
       content: "";
@@ -24,13 +31,8 @@
       position: absolute;
       bottom: -10px;
     }
-  }
 
-  @media (min-width: @desktop-width) {
-    height: 260px;
-    margin-bottom: 108px;
-
-    &::after {
+    @media (min-width: @desktop-width) {
       background-image: url("/img/zigzag-fill-desktop.png");
       height: 34px;
       display: inline-block;
