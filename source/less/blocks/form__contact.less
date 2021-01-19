@@ -3,9 +3,11 @@
   padding: 0;
   display: grid;
   grid-template-columns: 1fr;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 175px auto;
+    grid-template-columns: 167px auto;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
@@ -13,28 +15,34 @@
   }
 }
 
+.form__contact.form__contact--actions {
+  margin-bottom: 0;
+}
+
 .contact__title {
-  .form__base-type-title;
+  .form__base-type-title();
   grid-column: 1;
   grid-row: 1;
+  margin-bottom: 29px;
 }
 
 .contact__text {
-  .form__base-type-text;
+  .form__base-type-text();
 }
 
 .contact__item {
   line-height: 18px;
   font-weight: @bold-weight;
-  margin-bottom: 22px;
+  margin-bottom: 25px;
 
   &:last-child {
-    margin-bottom: 34px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @tablet-width) {
-    font-size: @middle;
+    font-size: @font-size-middle;
     display: flex;
+    margin-bottom: 39px;
   }
 }
 
@@ -59,17 +67,54 @@
   }
 }
 
+.contact__item-text {
+  border-bottom: solid @grey 2px;
+  height: 50px;
+  display: inline-block;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 24px;
+    padding-left: 19px;
+    padding-bottom: 8px;
+    position: relative;
+    height: 37px;
+  }
+}
+
+.contact__item-textimg {
+  border-bottom: solid @grey 2px;
+  height: 54px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-bottom: 4px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    height: 36px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 15px;
+    height: 34px;
+  }
+}
+
 .contact__field {
   width: 100%;
   line-height: 18px;
-  opacity: 0.3;
+  color: @grey-light-normal;
   border: none;
-  border-bottom: solid @grey 2px;
-  padding: 17px 0;
+  padding-top: 15px;
 
   @media (min-width: @tablet-width) {
-    font-size: @middle;
+    font-size: @font-size-middle;
     padding: 0;
+    position: absolute;
+    top: -5px;
   }
 }
 
@@ -78,6 +123,6 @@
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 5px 24px 0 0;
+    padding: 0;
   }
 }

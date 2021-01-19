@@ -1,17 +1,27 @@
 .form-description {
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 81px;
+  }
 }
 
 .form-description__wrapper {
   .wrapper();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 175px auto 175px;
+  }
 }
 
 .form-description__text {
-  font-size: @tiny;
+  font-size: @font-size-tiny;
   color: @grey;
 
   @media (min-width: @tablet-width) {
-    font-size: @small;
+    font-size: @font-size-small;
     line-height: 30px;
+    grid-column: 2;
   }
 }

@@ -1,8 +1,22 @@
+.form__container {
+  @media (min-width: @tablet-width) {
+    background-color: @grey-lighter;
+
+    padding-top: 66px;
+  }
+}
+
 .form__color {
-  .form__base-type;
+  .form__base-type();
+  .wrapper();
+
+  margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
+    background-color: @grey-lighter;
     grid-template-columns: 175px auto;
+    padding-bottom: 10px;
+    margin-bottom: 65px;
   }
 
   @media (min-width: @desktop-width) {
@@ -11,11 +25,12 @@
 }
 
 .color__title {
-  .form__base-type-title;
+  .form__base-type-title();
+  margin-bottom: 34px;
 }
 
 .color__text {
-  .form__base-type-text;
+  .form__base-type-text();
 }
 
 .color__list {
@@ -24,14 +39,123 @@
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 76px);
+    grid-column-gap: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 263px);
+    grid-template-rows: 76px 76px;
+    grid-column-gap: 0;
   }
 }
 
 .color__item {
-  .form__base-type-item;
+  .form__base-type-item();
+
+  margin-left: 60px;
+  margin-bottom: 26px;
+  display: block;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.color__item label {
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 20px;
+  }
+}
+
+/* box */
+.color__checkbox {
+  +label {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -60px;
+      top: -8px;
+      width: 40px;
+      height: 40px;
+      border: 2px solid @grey;
+
+      @media (min-width: @tablet-width) {
+        left: -67px;
+        top: -11px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        left: -61px;
+        top: -16px;
+        width: 51px;
+        height: 51px;
+      }
+    }
+  }
+}
+
+.color__checkbox:checked {
+  +label {
+    >span {
+
+      /* arrow 1 */
+      &::before {
+        content: "";
+        position: absolute;
+        left: -50px;
+        bottom: 2px;
+        width: 2px;
+        height: 12px;
+        transform: rotate(-45deg);
+        background-color: @black;
+
+        @media (min-width: @tablet-width) {
+          left: -51px;
+          bottom: 0;
+          width: 2px;
+          height: 15px;
+        }
+
+        @media (min-width: @desktop-width) {
+          left: -46px;
+          bottom: 3px;
+        }
+      }
+
+      /* arrow 2 */
+      &::after {
+        content: "";
+        position: absolute;
+        left: -39px;
+        bottom: 0;
+        width: 2px;
+        height: 22px;
+        transform: rotate(45deg);
+        background-color: @black;
+
+        @media (min-width: @tablet-width) {
+          left: -36px;
+          bottom: -3px;
+          width: 2px;
+          height: 28px;
+        }
+
+        @media (min-width: @desktop-width) {
+          left: -31px;
+          bottom: 2px;
+        }
+      }
+    }
+  }
 }
