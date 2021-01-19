@@ -8,8 +8,8 @@
   grid-template-columns: 1fr;
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 51px;
+    grid-template-columns: repeat(3, 316px);
+    grid-column-gap: 50px;
   }
 }
 
@@ -21,23 +21,53 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    padding-bottom: 0;
+    margin-bottom: 52px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 316px;
+    grid-template-rows: 462px auto;
+    padding-bottom: 0;
   }
 }
 
 .catalog__item-image {
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1;
+    grid-row: 1;
+    width: 334px;
+    height: 334px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+    height: 100%;
+  }
 }
 
 .catalog__link {
   display: flex;
-  margin-bottom: 27px;
   width: 260px;
   height: 195px;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 334px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 316px;
+  }
+}
+
+.catalog__image {
+  margin: 0 auto;
 }
 
 .catalog__title {
@@ -49,13 +79,35 @@
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-big;
+    margin-bottom: 10px;
+  }
+}
+
+.catalog__item-container {
+  @media (min-width: @tablet-width) {
+    grid-row: 1;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 18px;
+    margin-bottom: 10px;
   }
 }
 
 .catalog__item-text {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   padding: 0 27px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-rows: auto 73px;
+    padding-top: 27px;
+    padding-left: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 8px;
+    padding-left: 26px;
+  }
 }
 
 .catalog__details {
@@ -64,11 +116,16 @@
   line-height: 30px;
   color: @grey;
   padding-bottom: 17px;
-  border-bottom: solid @grey-light 1px;
-  margin-bottom: 22px;
+  margin-top: 5px;
 
   @media (min-width: @tablet-width) {
     font-size: @font-size-smaller;
+    margin-bottom: 0;
+    margin-top: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
   }
 }
 
@@ -76,6 +133,13 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding-top: 23px;
+  padding-right: 4px;
+
+  @media (min-width: @tablet-width) {
+    grid-row: 2;
+    border-top: solid @grey-light 1px;
+  }
 }
 
 .catalog__price {
