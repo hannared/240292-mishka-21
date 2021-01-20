@@ -46,6 +46,10 @@
 
 .contact-details__field {
   .contact__field();
+
+  @media (min-width: @tablet-width) {
+    background-color: @grey-lighter;
+  }
 }
 
 .contact-details__item {
@@ -75,7 +79,9 @@
   }
 }
 
-.contact-details__field--text {
+.contact-details__text-field {
+  .contact__field();
+
   height: 124px;
   margin: 0;
   padding: 15px;
@@ -91,7 +97,6 @@
     padding-top: 15px;
     margin: 0;
     margin-top: 5px;
-    background-color: @grey-lighter;
   }
 }
 
@@ -149,11 +154,10 @@
   }
 
   .form__button {
-    display: inline-block;
     width: 100%;
     height: 52px;
     line-height: 16px;
-    font-size: 17px;
+    font-size: @font-size-small;
 
     @media (min-width: @tablet-width) {
       width: 230px;

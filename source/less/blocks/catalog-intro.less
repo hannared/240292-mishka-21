@@ -3,12 +3,19 @@
 }
 
 .catalog-intro__background {
-  background-color: @grey-lighter;
-  width: 100%;
-  height: 177px;
+  .form-intro-background();
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 122px;
+  }
 }
 
 .catalog-intro__title {
   .wrapper();
   .intro__title;
+
+  @media (min-width: @tablet-width) {
+    height: 100px;
+    padding-top: 100px;
+  }
 }
