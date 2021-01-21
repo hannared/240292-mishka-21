@@ -52,7 +52,9 @@
 
       <div class="user-list__icon user-list__icon--cart nav__menu nav__menu--last">
         <a href="/cart">
-          <img src="img/cart.svg" width="21" height="18">
+          <svg class="icon icon--cart">
+            <use xlink:href="img/sprite.svg#icon-cart"></use>
+          </svg>
         </a>
       </div>
 
@@ -86,6 +88,12 @@
           <div class="catalog__item-image">
             <a class="catalog__link" href="catalog_item.html">
               <picture>
+                <source type="image/webp" media="(min-width: 1140px)"
+                  srcset="img/photo-1-desktop.webp 1x, img/photo-1-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-1-tablet.webp 1x, img/photo-1-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1140px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"
@@ -103,7 +111,9 @@
             <div class="catalog__buy">
               <p class="catalog__price">1 200 руб.</p>
               <a class="catalog__button" href="buy_modal.html">
-                <img src="img/cart.svg" width="21" height="18" alt="В корзину">
+                <svg class="icon icon--cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -113,6 +123,12 @@
           <div class="catalog__item-image">
             <a class="catalog__link" href="catalog_item.html">
               <picture>
+                <source type="image/webp" media="(min-width: 1140px)"
+                  srcset="img/photo-2-desktop.webp 1x, img/photo-2-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-2-tablet.webp 1x, img/photo-2-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-2-mobile.webp 1x, img/photo-2-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1140px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"
@@ -128,7 +144,9 @@
             <div class="catalog__buy">
               <p class="catalog__price">690 руб.</p>
               <a class="catalog__button" href="buy_modal.html">
-                <img src="img/cart.svg" width="21" height="18" alt="В корзину">
+                <svg class="icon icon--cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -137,6 +155,12 @@
           <div class="catalog__item-image">
             <a class="catalog__link" href="catalog_item.html">
               <picture>
+                <source type="image/webp" media="(min-width: 1140px)"
+                  srcset="img/photo-3-desktop.webp 1x, img/photo-3-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/photo-3-tablet.webp 1x, img/photo-3-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-3-mobile.webp 1x, img/photo-3-mobile@2x.webp 2x">
+
                 <source media="(min-width: 1140px)" srcset="img/photo-3-desktop.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)" srcset="img/photo-3-tablet.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
                 <img class="catalog__image" src="img/photo-3-mobile.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"
@@ -152,7 +176,9 @@
             <div class="catalog__buy">
               <p class="catalog__price">1 500 руб.</p>
               <a class="catalog__button" href="buy_modal.html">
-                <img src="img/cart.svg" width="21" height="18" alt="В корзину">
+                <svg class="icon icon--cart">
+                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -164,17 +190,27 @@
     <section class="catalog__process process">
       <div class="process__wrapper">
         <div class="process__header">
-          <img class="process__image" src="img/video.svg" width="32" height="22" alt="Видео">
+          <svg class="icon icon--video process__image">
+            <use xlink:href="img/sprite.svg#icon-video"></use>
+          </svg>
           <p class="process__title">Процесс<br />производства</p>
         </div>
         <div class="process__video video">
           <picture>
+            <source type="image/webp" media="(min-width: 1140px)"
+              srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
+
             <source media="(min-width: 1140px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img class="video__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"
               alt="Видео процесса производства">
           </picture>
-          <img class="video__player" src="img/play.svg" alt="Посмотреть видео">
+          <svg class="icon icon--play video__player">
+            <use xlink:href="img/sprite.svg#icon-play"></use>
+          </svg>
         </div>
         <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
           появляются наши товары.</p>
