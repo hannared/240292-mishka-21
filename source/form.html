@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Вязание на заказ</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page">
@@ -262,17 +262,23 @@
         <ul class="social__list social">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
-              <img src="img/insta.svg" alt="Мы в Инстаграм">
+              <svg class="icon icon--insta">
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
-              <img src="img/fb.svg" alt="Мы в Фейсбуке">
+              <svg class="icon icon--fb">
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
-              <img src="img/twitter.svg" alt="Мы в Твиттере">
+              <svg class="icon icon--twitter">
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -281,7 +287,9 @@
       <div class="page-footer__copyright copyright">
         <p class="copyright__text">Разработано</p>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__icon" src="img/htmlacademy.svg" alt="HTML Academy">
+          <svg class="icon icon--htmlacademy">
+            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
