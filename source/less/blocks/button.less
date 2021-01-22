@@ -10,4 +10,16 @@
   display: inline-block;
   vertical-align: middle;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: @grey;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @grey;
+    color: @white;
+    color: rgba(255, 255, 255, 0.3)
+  }
 }

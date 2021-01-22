@@ -50,6 +50,16 @@
   justify-content: space-between;
   align-items: center;
 
+  &:hover,
+  &:focus {
+    background-color: @green-light-more;
+    height: 108px;
+
+    @media (min-width: @tablet-width) {
+      height: 124px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: 119px;
   }
@@ -71,6 +81,11 @@
 .catalog-navigation__text {
   width: 130px;
   margin-top: -5px;
+
+  &:hover,
+  &:focus {
+    margin-top: -10px;
+  }
 }
 
 .catalog-navigation__icon-lamp {
