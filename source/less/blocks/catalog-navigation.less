@@ -30,6 +30,10 @@
 .catalog-navigation__item--interior {
   grid-row: 1;
   grid-column: 1;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 155px;
+  }
 }
 
 .catalog-navigation__item--toys {
@@ -39,6 +43,8 @@
   @media (min-width: @tablet-width) {
     grid-row: 1;
     grid-column: 2;
+
+    margin-top: 155px;
   }
 }
 
@@ -57,6 +63,7 @@
 
     @media (min-width: @tablet-width) {
       height: 124px;
+      margin-top: -5px;
     }
   }
 
@@ -76,16 +83,22 @@
   @media (min-width: @tablet-width) {
     height: 119px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: @green-light-more;
+    height: 108px;
+
+    @media (min-width: @tablet-width) {
+      height: 124px;
+      margin-top: -5px;
+    }
+  }
 }
 
 .catalog-navigation__text {
   width: 130px;
   margin-top: -5px;
-
-  &:hover,
-  &:focus {
-    margin-top: -10px;
-  }
 }
 
 .catalog-navigation__icon-lamp {
