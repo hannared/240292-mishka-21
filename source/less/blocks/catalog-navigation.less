@@ -61,9 +61,22 @@
     background-color: @green-light-more;
     height: 108px;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       height: 124px;
       margin-top: -5px;
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      svg {
+        fill: @green;
+        opacity: 0.3;
+      }
     }
   }
 
@@ -80,19 +93,32 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: @tablet-width) {
-    height: 119px;
-  }
-
   &:hover,
   &:focus {
     background-color: @green-light-more;
     height: 108px;
 
-    @media (min-width: @tablet-width) {
+    @media (min-width: @desktop-width) {
       height: 124px;
       margin-top: -5px;
+
+      svg {
+        opacity: 0.7;
+      }
     }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      svg {
+        fill: @green;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 119px;
   }
 }
 

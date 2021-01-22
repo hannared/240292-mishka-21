@@ -82,7 +82,7 @@
 
 .video__image {
   @media (min-width: @desktop-width) {
-    height: 455px;
+    height: 454px;
   }
 }
 
@@ -108,6 +108,15 @@
 }
 
 .video__player {
+
+  &:hover,
+  &:focus {
+    width: 120%;
+    height: 120%;
+  }
+}
+
+.video__player-image {
   position: absolute;
   top: 35px;
   left: 80px;
