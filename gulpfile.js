@@ -11,6 +11,7 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
+const inject = require('gulp-inject');
 
 
 // Styles
@@ -71,7 +72,7 @@ const sprite = () => {
     .pipe(rename({prefix: 'icon-'}))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img/icons"));
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -96,6 +97,20 @@ const reload = done => {
   sync.reload();
 }
 
+const svginjector = () => {
+  const target = gulp.src('./build/*.html');
+  const sources = gulp.src(['./build/img/sprite.svg']);
+
+  return target.pipe(inject(sources, {
+    transform: function (filePath, file) {
+      // return file contents as string
+      return file.contents.toString('utf8')
+    }}))
+    .pipe(gulp.dest('./build'));
+}
+
+exports.svginjector = svginjector;
+
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -108,15 +123,15 @@ exports.html = html;
 
 const watcher = () => {
   gulp.watch("source/img/**/*.{jpg,png}", gulp.series(images));
-  gulp.watch("source/img/icons/*.svg", gulp.series(sprite));
+  gulp.watch("source/img/icons/*.svg", gulp.series(sprite, svginjector));
   gulp.watch("source/less/**/*.less", gulp.series(styles));
   gulp.watch("source/*.html", html);
   gulp.watch("source/*.html").on("change", reload);
 }
 
-exports.build = gulp.parallel(styles, css, html, sprite, images, createWebp);
+exports.build = gulp.series(styles, css, html, sprite, images, createWebp, svginjector);
 
 
 exports.default = gulp.series(
-    styles, css, images, sprite, createWebp, html, server, watcher
+    styles, css, images, sprite, createWebp, html, svginjector, server, watcher
 );
