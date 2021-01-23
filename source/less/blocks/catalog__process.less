@@ -108,18 +108,24 @@
 }
 
 .video__player {
-
-  &:hover,
-  &:focus {
-    width: 120%;
-    height: 120%;
-  }
-}
-
-.video__player-image {
   position: absolute;
   top: 35px;
   left: 80px;
+
+  width: 101px;
+  height: 77px;
+
+  transform: scale(1.0);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
 
   @media (min-width: @tablet-width) {
     top: 188px;
