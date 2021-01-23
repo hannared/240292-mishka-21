@@ -12,7 +12,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
 const inject = require('gulp-inject');
-const { watch } = require("browser-sync");
+const uglify = require('gulp-uglify');
 
 
 // Styles
@@ -135,9 +135,18 @@ const watcher = () => {
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, html, svginjector)).on("change", reload);
   gulp.watch("source/less/**/*.less", gulp.series(styles)).on("change", reload);
   gulp.watch("source/*.html", gulp.series(sprite, html, svginjector)).on("change", reload);
+  gulp.watch("source/js/*.js", gulp.series(script)).on("change", reload);
 }
 
 exports.watcher = watcher;
+
+const script = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+}
+
+exports.script = script;
 
 exports.build = gulp.series(
   gulp.parallel(
@@ -147,7 +156,8 @@ exports.build = gulp.series(
     sprite,
     images,
     fonts,
-    createWebp
+    createWebp,
+    script
   ),
   svginjector
 );
@@ -160,7 +170,8 @@ exports.default = gulp.series(
     sprite,
     images,
     fonts,
-    createWebp
+    createWebp,
+    script
   ),
   gulp.series(
     svginjector,

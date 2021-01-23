@@ -206,6 +206,14 @@
   grid-row: 5;
   display: flex;
 
+  a.user-list__icon--hover {
+    opacity: 0.6;
+  }
+
+  a.user-list__icon--active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     .nav-cell-align();
 
@@ -225,6 +233,15 @@
   grid-column: 1;
   grid-row: 5;
   display: flex;
+
+  a.user-list__icon--hover {
+    color: @green;
+  }
+
+  a.user-list__icon--active {
+    color: @green;
+    opacity: 0.3;
+  }
 
   a {
     height: 18px;
