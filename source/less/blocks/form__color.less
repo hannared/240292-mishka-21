@@ -77,6 +77,20 @@
 /* box */
 .color__checkbox {
   +label {
+
+    &:hover {
+      &::before {
+        border-color: @green-lighter;
+      }
+    }
+
+    &:active {
+      &::before {
+        border-color: black;
+        opacity: 0.3;
+      }
+    }
+
     &::before {
       content: "";
       position: absolute;

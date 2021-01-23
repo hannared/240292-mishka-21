@@ -57,8 +57,48 @@
   display: flex;
   align-self: center;
 
+  &:hover {
+
+    .contact-details__item-textimg,
+    .contact-details__item-text {
+      border-color: @green-lighter;
+      color: @green-lighter;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
   &:last-of-type {
     margin-bottom: 15px;
+  }
+}
+
+.contact-details__item-textimg {
+  border-bottom: solid @grey 2px;
+  height: 54px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  padding-bottom: 4px;
+
+  color: @black;
+
+  svg {
+    opacity: 0.2;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    height: 36px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 15px;
+    height: 34px;
   }
 }
 
