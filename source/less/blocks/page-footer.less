@@ -6,6 +6,21 @@
 .page-footer__wrapper {
   .wrapper();
 
+  .social__link,
+  .page-footer__logo a {
+    color: black;
+    opacity: 1.0;
+
+    &:hover {
+      color: @green-light-most;
+    }
+
+    &:active {
+      color: @green-light-most;
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: 143px;
     display: flex;
@@ -60,6 +75,19 @@
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
     margin: 0;
+  }
+}
+
+.copyright__link {
+  color: @green;
+
+  &:hover {
+    color: @green-light-most;
+  }
+
+  &:active {
+    color: @green-light-most;
+    opacity: 0.3;
   }
 }
 
