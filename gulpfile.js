@@ -144,7 +144,8 @@ const script = () => {
 
 exports.script = script;
 
-exports.build = gulp.series(
+const build = gulp.series(
+  clean,
   gulp.parallel(
     styles,
     copy,
@@ -157,21 +158,11 @@ exports.build = gulp.series(
   ),
   svginjector
 );
+exports.build = build;
 
 exports.default = gulp.series(
-  clean,
-  gulp.parallel(
-    styles,
-    copy,
-    html,
-    sprite,
-    images,
-    fonts,
-    createWebp,
-    script
-  ),
+  build,
   gulp.series(
-    svginjector,
     server,
     watcher
   )
