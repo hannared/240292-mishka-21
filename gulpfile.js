@@ -128,12 +128,12 @@ exports.fonts = fonts;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/fonts/**/*", gulp.series(fonts)).on("change", reload);
-  gulp.watch("source/img/**/*.{jpg,png}", gulp.series(images)).on("change", reload);
+  gulp.watch("source/fonts/**/*", fonts).on("change", reload);
+  gulp.watch("source/img/**/*.{jpg,png}", images).on("change", reload);
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, html, svginjector)).on("change", reload);
-  gulp.watch("source/less/**/*.less", gulp.series(styles)).on("change", reload);
+  gulp.watch("source/less/**/*.less", styles).on("change", reload);
   gulp.watch("source/*.html", gulp.series(sprite, html, svginjector)).on("change", reload);
-  gulp.watch("source/js/*.js", gulp.series(script)).on("change", reload);
+  gulp.watch("source/js/*.js", script).on("change", reload);
 }
 
 exports.watcher = watcher;
