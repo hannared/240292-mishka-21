@@ -97,15 +97,15 @@ const reload = done => {
 }
 
 const svginjector = () => {
-  const target = gulp.src('./build/*.html');
-  const sources = gulp.src(['./build/img/sprite.svg']);
+  const target = gulp.src('build/*.html');
+  const sources = gulp.src(['build/img/sprite.svg']);
 
   return target.pipe(inject(sources, {
     transform: function (filePath, file) {
       // return file contents as string
       return file.contents.toString('utf8')
     }}))
-    .pipe(gulp.dest('./build'));
+    .pipe(gulp.dest('build/'));
 }
 
 exports.svginjector = svginjector;
