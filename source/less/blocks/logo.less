@@ -1,0 +1,32 @@
+.logo__link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -5px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet-width) {
+    img {
+      display: block;
+      width: 113px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    img {
+      display: block;
+      width: 149px;
+      height: auto;
+      margin: 0 auto;
+    }
+  }
+}

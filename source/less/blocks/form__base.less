@@ -24,11 +24,15 @@
 
   @media (min-width: @tablet-width) {
     align-items: flex-start;
-    justify-content: center;
+    justify-content: start;
 
     &::after {
       display: none;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    justify-content: center;
   }
 }
 

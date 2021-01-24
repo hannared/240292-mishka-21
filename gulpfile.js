@@ -11,7 +11,14 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
+const inject = require('gulp-inject');
+const uglify = require('gulp-uglify');
+const del = require('del');
 
+const clean = () => {
+  return del("build");
+}
+exports.clean = clean;
 
 // Styles
 
@@ -32,18 +39,11 @@ const styles = () => {
 
 exports.styles = styles;
 
-const css = () => {
-  return gulp.src("source/css/normalize.css")
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(rename("normalize.min.css"))
+const copy = () => {
+  return gulp.src("source/lib/*.css")
     .pipe(gulp.dest("build/css/"));
 }
-
-exports.css = css;
+exports.copy = copy;
 
 const images = () => {
   return gulp
@@ -71,7 +71,7 @@ const sprite = () => {
     .pipe(rename({prefix: 'icon-'}))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img/icons"));
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.sprite = sprite;
@@ -96,6 +96,20 @@ const reload = done => {
   sync.reload();
 }
 
+const svginjector = () => {
+  const target = gulp.src('build/*.html');
+  const sources = gulp.src(['build/img/sprite.svg']);
+
+  return target.pipe(inject(sources, {
+    transform: function (filePath, file) {
+      // return file contents as string
+      return file.contents.toString('utf8')
+    }}))
+    .pipe(gulp.dest('build/'));
+}
+
+exports.svginjector = svginjector;
+
 const html = () => {
   return gulp.src("source/*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
@@ -104,19 +118,52 @@ const html = () => {
 
 exports.html = html;
 
+const fonts = () => {
+  return gulp.src("source/fonts/*.{woff,woff2}")
+    .pipe(gulp.dest("build/fonts"));
+}
+
+exports.fonts = fonts;
+
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/img/**/*.{jpg,png}", gulp.series(images));
-  gulp.watch("source/img/icons/*.svg", gulp.series(sprite));
-  gulp.watch("source/less/**/*.less", gulp.series(styles));
-  gulp.watch("source/*.html", html);
-  gulp.watch("source/*.html").on("change", reload);
+  gulp.watch("source/img/icons/*.svg", gulp.series(sprite, html, svginjector)).on("change", reload);
+  gulp.watch("source/less/**/*.less", styles).on("change", reload);
+  gulp.watch("source/*.html", gulp.series(sprite, html, svginjector)).on("change", reload);
+  gulp.watch("source/js/*.js", script).on("change", reload);
 }
 
-exports.build = gulp.parallel(styles, css, html, sprite, images, createWebp);
+exports.watcher = watcher;
 
+const script = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
+}
+
+exports.script = script;
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(
+    styles,
+    copy,
+    html,
+    sprite,
+    images,
+    fonts,
+    createWebp,
+    script
+  ),
+  svginjector
+);
+exports.build = build;
 
 exports.default = gulp.series(
-    styles, css, images, sprite, createWebp, html, server, watcher
+  build,
+  gulp.series(
+    server,
+    watcher
+  )
 );

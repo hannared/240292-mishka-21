@@ -6,6 +6,21 @@
 .page-footer__wrapper {
   .wrapper();
 
+  .page-footer__link,
+  .page-footer__logo .page-footer__logo-link {
+    color: black;
+    opacity: 1;
+
+    &:hover {
+      color: @green-light-most;
+    }
+
+    &:active {
+      color: @green-light-most;
+      opacity: 0.3;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     height: 143px;
     display: flex;
@@ -15,7 +30,7 @@
   }
 }
 
-.social__list {
+.page-footer__list {
   .list-unstyled();
 
   margin: 0;
@@ -63,7 +78,20 @@
   }
 }
 
-.copyright__text {
+.page-footer__copyright-link {
+  color: @green;
+
+  &:hover {
+    color: @green-light-most;
+  }
+
+  &:active {
+    color: @green-light-most;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright-text {
   font-size: @font-size-middle;
   line-height: 18px;
   font-weight: @bold-weight;

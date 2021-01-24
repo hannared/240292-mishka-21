@@ -11,11 +11,17 @@
 }
 
 .catalog-intro__title {
-  .wrapper();
-  .intro__title;
+  .intro__title-base();
+
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
-    height: 100px;
-    padding-top: 100px;
+    padding-top: 35px;
+    height: 238px;
   }
 }

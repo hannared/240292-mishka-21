@@ -129,6 +129,16 @@
   margin-right: 14px;
   margin-bottom: 30px;
 
+  &:hover,
+  &:focus,
+  &:active {
+    color: @green-light-most;
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     margin-right: 51px;
   }

@@ -29,21 +29,21 @@
       <div class="user-list__icon user-list__icon--catalog nav__menu">
       </div>
 
-      <div class="navigation__item navigation__item--catalog nav__menu">
-        <a class="navigation__link navigation__link--active" href="catalog.html">Каталог товаров</a>
+      <div class="nav__item nav__item--catalog nav__menu">
+        <a class="nav__link nav__link--active" href="catalog.html">Каталог товаров</a>
       </div>
 
       <div class="user-list__icon user-list__icon--order nav__menu">
       </div>
 
-      <div class="navigation__item navigation__item--order nav__menu">
-        <a class="navigation__link" href="service.html">Вязание на заказ</a>
+      <div class="nav__item nav__item--order nav__menu">
+        <a class="nav__link" href="service.html">Вязание на заказ</a>
       </div>
 
       <div class="user-list__icon user-list__icon--search nav__menu">
-        <a href="/search">
+        <a class="user-list__icon-link" href="/search">
           <svg class="icon icon--search">
-            <use xlink:href="img/sprite.svg#icon-search"></use>
+            <use xlink:href="#icon-search"></use>
           </svg>
         </a>
       </div>
@@ -53,9 +53,9 @@
       </div>
 
       <div class="user-list__icon user-list__icon--cart nav__menu nav__menu--last">
-        <a href="/cart">
+        <a class="user-list__icon-link" href="/cart">
           <svg class="icon icon--cart">
-            <use xlink:href="img/sprite.svg#icon-cart"></use>
+            <use xlink:href="#icon-cart"></use>
           </svg>
         </a>
       </div>
@@ -64,15 +64,15 @@
         <a class="user-list__link" href="/cart">Корзина: пока пуста</a>
       </div>
 
-      <div class="additional-navigation__item additional-navigation__item--new">
-        <a href="/new">Новые поступления</a>
+      <div class="extra-nav__item extra-nav__item--new">
+        <a class="extra-nav__item-link" href="/new">Новые поступления</a>
       </div>
 
-      <div class="additional-navigation__item additional-navigation__item--sale">
-        <a href="/sale">Распродажа</a>
+      <div class="extra-nav__item extra-nav__item--sale">
+        <a class="extra-nav__item-link" href="/sale">Распродажа</a>
       </div>
 
-      <span class="additional-navigation__info">
+      <span class="extra-nav__info">
         Бесплатная доставка по России
       </span>
     </nav>
@@ -114,7 +114,7 @@
               <p class="catalog__price">1 200 руб.</p>
               <a class="catalog__button" href="buy_modal.html">
                 <svg class="icon icon--cart">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -147,7 +147,7 @@
               <p class="catalog__price">690 руб.</p>
               <a class="catalog__button" href="buy_modal.html">
                 <svg class="icon icon--cart">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -179,7 +179,7 @@
               <p class="catalog__price">1 500 руб.</p>
               <a class="catalog__button" href="buy_modal.html">
                 <svg class="icon icon--cart">
-                  <use xlink:href="img/sprite.svg#icon-cart"></use>
+                  <use xlink:href="#icon-cart"></use>
                 </svg>
               </a>
             </div>
@@ -193,10 +193,11 @@
       <div class="process__wrapper">
         <div class="process__header">
           <svg class="icon icon--video process__image">
-            <use xlink:href="img/sprite.svg#icon-video"></use>
+            <use xlink:href="#icon-video"></use>
           </svg>
-          <p class="process__title">Процесс<br />производства</p>
+          <p class="process__title">Процесс производства</p>
         </div>
+
         <div class="process__video video">
           <picture>
             <source type="image/webp" media="(min-width: 1140px)"
@@ -204,15 +205,17 @@
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
-
             <source media="(min-width: 1140px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img class="video__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"
+            <img class="process__video-image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x"
               alt="Видео процесса производства">
           </picture>
-          <svg class="icon icon--play video__player">
-            <use xlink:href="img/sprite.svg#icon-play"></use>
-          </svg>
+
+          <a href="#" class="process__video-player">
+            <svg class="icon icon--play">
+              <use xlink:href="#icon-play"></use>
+            </svg>
+          </a>
         </div>
         <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как
           появляются наши товары.</p>
@@ -226,32 +229,33 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <a href="/">
-          <img class="page-footer__image" src="img/logo-footer.svg" width="101" height="34"
-            alt="Магазин товаров ручной работы «Мишка»">
+        <a class="page-footer__logo-link" href="/">
+          <svg class="icon icon--logo-footer">
+            <use xlink:href="#icon-logo-footer"></use>
+          </svg>
         </a>
       </div>
 
       <div class="page-footer__social">
-        <ul class="social__list social">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--instagram" href="https://instagram.com/htmlacademy">
               <svg class="icon icon--insta">
-                <use xlink:href="img/sprite.svg#icon-insta"></use>
+                <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://facebook.com/htmlacademy">
               <svg class="icon icon--fb">
-                <use xlink:href="img/sprite.svg#icon-fb"></use>
+                <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--twitter" href="https://www.twitter.com/htmlacademy">
               <svg class="icon icon--twitter">
-                <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                <use xlink:href="#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -259,15 +263,18 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <p class="page-footer__copyright-text">Разработано</p>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="icon icon--htmlacademy">
-            <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
       </div>
     </div>
   </footer>
+
+  <!-- inject:svg -->
+  <!-- endinject -->
 </body>
 
 </html>

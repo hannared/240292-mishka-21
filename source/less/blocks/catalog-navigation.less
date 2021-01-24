@@ -30,6 +30,10 @@
 .catalog-navigation__item--interior {
   grid-row: 1;
   grid-column: 1;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 155px;
+  }
 }
 
 .catalog-navigation__item--toys {
@@ -39,6 +43,8 @@
   @media (min-width: @tablet-width) {
     grid-row: 1;
     grid-column: 2;
+
+    margin-top: 155px;
   }
 }
 
@@ -49,6 +55,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: @green-light-more;
+    height: 108px;
+
+    @media (min-width: @desktop-width) {
+      height: 124px;
+      margin-top: -5px;
+
+      .catalog-navigation__icon-lamp {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      .catalog-navigation__icon-lamp {
+        fill: @green;
+        opacity: 0.3;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     height: 119px;
@@ -62,6 +92,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: @green-light-more;
+    height: 108px;
+
+    @media (min-width: @desktop-width) {
+      height: 124px;
+      margin-top: -5px;
+
+      .catalog-navigation__icon-block {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:active {
+    @media (min-width: @desktop-width) {
+      .catalog-navigation__icon-block {
+        fill: @green;
+        opacity: 0.3;
+      }
+    }
+  }
 
   @media (min-width: @tablet-width) {
     height: 119px;
