@@ -39,11 +39,11 @@ const styles = () => {
 
 exports.styles = styles;
 
-const css = () => {
+const copy = () => {
   return gulp.src("source/css/normalize.min.css")
     .pipe(gulp.dest("build/css/"));
 }
-exports.css = css;
+exports.copy = copy;
 
 const images = () => {
   return gulp
@@ -147,7 +147,7 @@ exports.script = script;
 exports.build = gulp.series(
   gulp.parallel(
     styles,
-    css,
+    copy,
     html,
     sprite,
     images,
@@ -162,7 +162,7 @@ exports.default = gulp.series(
   clean,
   gulp.parallel(
     styles,
-    css,
+    copy,
     html,
     sprite,
     images,
