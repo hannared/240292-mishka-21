@@ -13,7 +13,12 @@ const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
 const inject = require('gulp-inject');
 const uglify = require('gulp-uglify');
+const del = require('del');
 
+const clean = () => {
+  return del("build/");
+}
+exports.clean = clean;
 
 // Styles
 
@@ -35,16 +40,9 @@ const styles = () => {
 exports.styles = styles;
 
 const css = () => {
-  return gulp.src("source/css/normalize.css")
-    .pipe(postcss([
-      autoprefixer(),
-      csso()
-    ]))
-    .pipe(sourcemap.write("."))
-    .pipe(rename("normalize.min.css"))
+  return gulp.src("source/css/normalize.min.css")
     .pipe(gulp.dest("build/css/"));
 }
-
 exports.css = css;
 
 const images = () => {
@@ -163,6 +161,7 @@ exports.build = gulp.series(
 );
 
 exports.default = gulp.series(
+  clean,
   gulp.parallel(
     styles,
     css,
