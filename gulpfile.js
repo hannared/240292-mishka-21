@@ -119,7 +119,7 @@ const html = () => {
 exports.html = html;
 
 const fonts = () => {
-  return gulp.src("source/fonts/*")
+  return gulp.src("source/fonts/*.{woff,woff2}")
     .pipe(gulp.dest("build/fonts"));
 }
 
