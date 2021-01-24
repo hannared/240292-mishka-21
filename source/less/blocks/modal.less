@@ -1,5 +1,4 @@
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -63,19 +62,27 @@
 }
 
 .modal__size {
-  border: solid 2px rgba(68, 68, 68, 0.1);
+  margin-bottom: 31px;
+  position: relative;
+  list-style-type: none;
   width: 82px;
   height: 52px;
-  display: inline-block;
-  padding-top: 11px;
-  text-align: center;
-  margin-bottom: 31px;
 
   @media (min-width: @tablet-width) {
     width: 112px;
   }
+}
 
-  &:hover {
+.modal__size-radio+label {
+  border: solid 2px rgba(68, 68, 68, 0.1);
+  width: 82px;
+  height: 52px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 11px;
+
+  &:hover,
+  &:focus {
     border: solid 2px rgba(68, 68, 68, 0.3);
   }
 
@@ -83,6 +90,18 @@
     color: @grey;
     border-color: @green;
   }
+}
+
+.modal__size-radio:checked+label {
+  border: solid 2px rgba(68, 68, 68, 0.1);
+  width: 82px;
+  height: 52px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 11px;
+
+  color: @grey;
+  border-color: @green;
 }
 
 .modal__button {

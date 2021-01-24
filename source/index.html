@@ -174,13 +174,29 @@
         <div class="modal__container">
           <p class="modal__text">Выберите размер:</p>
           <div class="modal__sizes">
-            <a class="modal__size" href="#">S</a>
-            <a class="modal__size" href="#">M</a>
-            <a class="modal__size" href="#">L</a>
+            <li class="modal__size">
+              <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="S"
+                id="radio-size-s" checked>
+              <label for="radio-size-s">
+                S
+              </label>
+            </li>
+            <li class="modal__size">
+              <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="M"
+                id="radio-size-m">
+              <label for="radio-size-m">
+                M
+              </label>
+            </li>
+            <li class="modal__size">
+              <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="L"
+                id="radio-size-l">
+              <label for="radio-size-l">
+                L
+              </label>
+            </li>
           </div>
-          <div class="modal__action">
-            <a class="modal__button" href="#">Добавить</a>
-          </div>
+          <a class="modal__button" href="#">Добавить</a>
         </div>
       </div>
     </section>
