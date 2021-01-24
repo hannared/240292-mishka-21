@@ -104,7 +104,7 @@
   grid-row: 4;
   display: flex;
 
-  a {
+  .user-list__icon-link {
     height: 18px;
     width: 18px;
 
@@ -206,11 +206,11 @@
   grid-row: 5;
   display: flex;
 
-  a.user-list__icon--hover {
+  .user-list__icon--hover {
     opacity: 0.6;
   }
 
-  a.user-list__icon--active {
+  .user-list__icon--active {
     opacity: 0.3;
   }
 
@@ -234,16 +234,16 @@
   grid-row: 5;
   display: flex;
 
-  a.user-list__icon--hover {
+  .user-list__icon--hover {
     color: @green;
   }
 
-  a.user-list__icon--active {
+  .user-list__icon--active {
     color: @green;
     opacity: 0.3;
   }
 
-  a {
+  .user-list__icon-link {
     height: 18px;
     width: 21px;
 
@@ -301,16 +301,5 @@
 
   @media (min-width: @desktop-width) {
     display: inline-block;
-  }
-}
-
-.page-header a {
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }

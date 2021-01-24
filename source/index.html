@@ -40,7 +40,7 @@
       </div>
 
       <div class="user-list__icon user-list__icon--search nav__menu">
-        <a class="user-list__link" href="/search">
+        <a class="user-list__icon-link" href="/search">
           <svg class="icon icon--search">
             <use xlink:href="#icon-search"></use>
           </svg>
@@ -52,7 +52,7 @@
       </div>
 
       <div class="user-list__icon user-list__icon--cart nav__menu nav__menu--last">
-        <a href="/cart">
+        <a class="user-list__icon-link" href="/cart">
           <svg class="icon icon--cart">
             <use xlink:href="#icon-cart"></use>
           </svg>
@@ -260,7 +260,7 @@
     <section class="reviews">
       <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
-        <div class="reviews__slide reviews__slide--1">
+        <div class="reviews__slide reviews__slide--active">
           <p class="reviews__text">
             Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как <br />у
             популярных
@@ -273,7 +273,7 @@
           </div>
         </div>
 
-        <div class="reviews__slide reviews__slide--2">
+        <div class="reviews__slide">
           <p>Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у
             популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали
             более стильными, а также набирают больше лайков!</p>
@@ -283,7 +283,7 @@
           </div>
         </div>
 
-        <div class="reviews__slide reviews__slide--3">
+        <div class="reviews__slide">
           <p>Я двоюродная сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков,
             как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу
             стали более стильными, а также набирают больше лайков!</p>
@@ -331,13 +331,11 @@
         </div>
         <div class="contacts__map map">
           <picture>
-
             <source type="image/webp" media="(min-width: 1140px)"
               srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-
             <source media="(min-width: 1140px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
             <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
@@ -354,7 +352,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <a href="/">
+        <a class="page-footer__logo-link" href="/">
           <svg class="icon icon--logo-footer">
             <use xlink:href="#icon-logo-footer"></use>
           </svg>
@@ -362,23 +360,23 @@
       </div>
 
       <div class="page-footer__social">
-        <ul class="social__list social">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="https://instagram.com/htmlacademy">
+        <ul class="page-footer__list social">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--instagram" href="https://instagram.com/htmlacademy">
               <svg class="icon icon--insta">
                 <use xlink:href="#icon-insta"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="https://facebook.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--facebook" href="https://facebook.com/htmlacademy">
               <svg class="icon icon--fb">
                 <use xlink:href="#icon-fb"></use>
               </svg>
             </a>
           </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="https://www.twitter.com/htmlacademy">
+          <li class="page-footer__item">
+            <a class="page-footer__link page-footer__link--twitter" href="https://www.twitter.com/htmlacademy">
               <svg class="icon icon--twitter">
                 <use xlink:href="#icon-twitter"></use>
               </svg>
@@ -388,8 +386,8 @@
       </div>
 
       <div class="page-footer__copyright copyright">
-        <p class="copyright__text">Разработано</p>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <p class="page-footer__copyright-text">Разработано</p>
+        <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="icon icon--htmlacademy">
             <use xlink:href="#icon-htmlacademy"></use>
           </svg>

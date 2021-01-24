@@ -66,6 +66,8 @@
 }
 
 .reviews__slide {
+  display: none;
+
   @media (min-width: @tablet-width) {
     grid-row: 2;
     grid-column: 1 / span 2;
@@ -156,9 +158,8 @@
   }
 }
 
-.reviews__slide--2,
-.reviews__slide--3 {
-  display: none;
+.reviews__slide--active {
+  display: block;
 }
 
 .reviews__toggle {
