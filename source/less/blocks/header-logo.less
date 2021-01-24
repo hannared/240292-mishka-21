@@ -1,0 +1,22 @@
+.header-logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  grid-row: 1;
+  grid-column: 1 / span 2;
+
+  @media (min-width: @tablet-width) {
+    .nav-cell-align();
+
+    height: 100%;
+    grid-column: 1 / span 2;
+    justify-content: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3;
+    justify-self: left;
+    padding-left: 46px;
+  }
+}

@@ -25,53 +25,6 @@
   }
 }
 
-.header-logo {
-  display: flex;
-  align-items: center;
-  position: relative;
-  justify-content: center;
-  grid-row: 1;
-  grid-column: 1 / span 2;
-
-  @media (min-width: @tablet-width) {
-    .nav-cell-align();
-
-    height: 100%;
-    grid-column: 1 / span 2;
-    justify-content: left;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-column: 3;
-    justify-self: left;
-    padding-left: 46px;
-  }
-}
-
-.logo__link {
-  display: flex;
-  justify-content: center;
-  margin-bottom: -5px;
-
-  @media (min-width: @tablet-width) {
-    img {
-      display: block;
-      width: 113px;
-      height: auto;
-      margin: 0 auto;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    img {
-      display: block;
-      width: 149px;
-      height: auto;
-      margin: 0 auto;
-    }
-  }
-}
-
 .main-navigation--closed .user-list__icon--catalog,
 .main-navigation--closed .navigation__item--catalog,
 .main-navigation--closed .user-list__icon--order,
