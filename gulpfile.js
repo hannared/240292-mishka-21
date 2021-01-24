@@ -128,8 +128,6 @@ exports.fonts = fonts;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/fonts/**/*", fonts).on("change", reload);
-  gulp.watch("source/img/**/*.{jpg,png}", images).on("change", reload);
   gulp.watch("source/img/icons/*.svg", gulp.series(sprite, html, svginjector)).on("change", reload);
   gulp.watch("source/less/**/*.less", styles).on("change", reload);
   gulp.watch("source/*.html", gulp.series(sprite, html, svginjector)).on("change", reload);
