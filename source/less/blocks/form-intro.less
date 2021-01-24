@@ -1,5 +1,5 @@
 .form-intro {
-  margin-bottom: 28px;
+  margin-bottom: 17px;
 }
 
 .form-intro-background() {
@@ -44,10 +44,18 @@
 
 .form-intro__background {
   .form-intro-background();
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 108px;
+  }
 }
 
 .form-intro__title {
-  .intro__title;
+  .intro__title-base();
 
   height: 100%;
   padding-top: 20px;

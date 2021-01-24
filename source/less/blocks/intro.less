@@ -57,7 +57,7 @@
   }
 }
 
-.intro__title {
+.intro__title-base() {
   font-size: @font-size-biggiest;
   line-height: 30px;
   font-weight: @bold-weight;
@@ -67,8 +67,9 @@
   width: 80%;
   height: 284px;
   margin: 0 auto;
-  margin-bottom: 119px;
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: @tablet-width) {
     margin: 0 auto;
@@ -84,4 +85,8 @@
     line-height: 57px;
     width: 50%;
   }
+}
+
+.intro__title {
+  .intro__title-base();
 }
