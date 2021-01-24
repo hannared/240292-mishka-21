@@ -21,16 +21,31 @@
   &:hover,
   &:focus {
     .catalog__item-text {
-      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-      margin-bottom: -1px;
-      margin-right: 1px;
-      margin-left: -1px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 99.7%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+      }
     }
   }
 
   &:active {
     .catalog__item-text {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 99.7%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+      }
     }
   }
 
