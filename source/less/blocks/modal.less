@@ -1,5 +1,5 @@
 .modal {
-  display: block;
+  display: none;
 }
 
 .modal {
@@ -14,10 +14,26 @@
   z-index: 100;
   width: 320px;
   height: 336px;
+
+  @media (min-width: @tablet-width) {
+    width: 566px;
+    height: 336px;
+  }
 }
 
 .modal__wrapper {
   padding: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 37px 30px 46px 30px;
+  }
+}
+
+.modal__container {
+  @media (min-width: @tablet-width) {
+    width: 350px;
+    margin: 0 auto;
+  }
 }
 
 .modal__header {
@@ -28,6 +44,13 @@
   margin: 0 auto;
   text-transform: uppercase;
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    font-size: 30px;
+    line-height: 57px;
+    text-align: center;
+  }
 }
 
 .modal__text {
@@ -35,6 +58,11 @@
   line-height: 30px;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.modal__sizes {
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__size {
@@ -45,12 +73,24 @@
   padding-top: 11px;
   text-align: center;
   margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+
+  &:hover {
+    border: solid 2px rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    color: @grey;
+    border-color: @green;
+  }
 }
 
 .modal__button {
   width: 100%;
   height: 52px;
-  width: 260px;
   font-size: @font-size-normal;
   line-height: 16px;
   font-weight: @bold-weight;
