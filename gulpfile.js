@@ -40,7 +40,7 @@ const styles = () => {
 exports.styles = styles;
 
 const copy = () => {
-  return gulp.src("source/css/normalize.min.css")
+  return gulp.src("source/lib/*.css")
     .pipe(gulp.dest("build/css/"));
 }
 exports.copy = copy;
