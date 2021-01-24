@@ -60,6 +60,8 @@
 .modal__sizes {
   display: flex;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 }
 
 .modal__size {
@@ -74,35 +76,46 @@
   }
 }
 
-.modal__size-radio + label {
-  border: solid 2px rgba(68, 68, 68, 0.1);
-  width: 82px;
-  height: 52px;
-  display: inline-block;
-  text-align: center;
-  padding-top: 11px;
+.modal__size-radio {
+  +label {
+    border: solid 2px rgba(68, 68, 68, 0.1);
+    width: 82px;
+    height: 52px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 11px;
 
-  &:hover,
-  &:focus {
-    border: solid 2px rgba(68, 68, 68, 0.3);
-  }
+    @media (min-width: @tablet-width) {
+      width: 112px;
+    }
 
-  &:active {
-    color: @grey;
-    border-color: @green;
+    &:hover,
+    &:focus {
+      border: solid 2px rgba(68, 68, 68, 0.3);
+    }
+
+    &:active {
+      color: @grey;
+      border-color: @green;
+    }
   }
 }
 
-.modal__size-radio:checked + label {
-  border: solid 2px rgba(68, 68, 68, 0.1);
-  width: 82px;
-  height: 52px;
-  display: inline-block;
-  text-align: center;
-  padding-top: 11px;
+.modal__size-radio:checked {
+  +label {
+    border: solid 2px rgba(68, 68, 68, 0.1);
+    width: 82px;
+    height: 52px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 11px;
+    color: @grey;
+    border-color: @green;
 
-  color: @grey;
-  border-color: @green;
+    @media (min-width: @tablet-width) {
+      width: 112px;
+    }
+  }
 }
 
 .modal__button {
@@ -117,4 +130,6 @@
   display: inline-block;
   text-align: center;
   padding: 18px;
+  border: none;
+  cursor: pointer;
 }

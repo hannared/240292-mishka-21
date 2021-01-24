@@ -171,9 +171,10 @@
     <section class="modal">
       <div class="modal__wrapper">
         <p class="modal__header">Добавить в корзину</p>
-        <div class="modal__container">
+
+        <form class="modal__container">
           <p class="modal__text">Выберите размер:</p>
-          <div class="modal__sizes">
+          <ul class="modal__sizes">
             <li class="modal__size">
               <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="S"
                 id="radio-size-s" checked>
@@ -195,9 +196,9 @@
                 L
               </label>
             </li>
-          </div>
-          <a class="modal__button" href="#">Добавить</a>
-        </div>
+          </ul>
+          <button type="submit" class="modal__button" href="#">Добавить</button>
+        </form>
       </div>
     </section>
 

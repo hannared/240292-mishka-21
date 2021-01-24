@@ -16,7 +16,7 @@ const uglify = require('gulp-uglify');
 const del = require('del');
 
 const clean = () => {
-  return del("build/");
+  return del("build");
 }
 exports.clean = clean;
 
