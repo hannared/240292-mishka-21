@@ -6,6 +6,12 @@
 }
 
 .extra-nav__item--sale {
+  padding-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+
   @media (min-width: @desktop-width) {
     grid-row: 2;
     grid-column: 2;
@@ -60,6 +66,9 @@
 .extra-nav__item {
   display: flex;
   justify-content: left;
+}
+
+.extra-nav__item--new {
   padding-left: 16px;
 
   @media (min-width: @tablet-width) {
