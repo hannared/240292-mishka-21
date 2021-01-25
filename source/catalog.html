@@ -224,6 +224,40 @@
         </div>
       </div>
     </section>
+
+    <section class="modal">
+      <div class="modal__wrapper">
+        <p class="modal__header">Добавить в корзину</p>
+
+        <form class="modal__container">
+          <p class="modal__text">Выберите размер:</p>
+          <ul class="modal__sizes">
+            <li class="modal__size">
+              <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="S"
+                id="radio-size-s" checked>
+              <label for="radio-size-s">
+                S
+              </label>
+            </li>
+            <li class="modal__size">
+              <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="M"
+                id="radio-size-m">
+              <label for="radio-size-m">
+                M
+              </label>
+            </li>
+            <li class="modal__size">
+              <input class="modal__size-radio visually-hidden" type="radio" name="modal-size" value="L"
+                id="radio-size-l">
+              <label for="radio-size-l">
+                L
+              </label>
+            </li>
+          </ul>
+          <button type="submit" class="modal__button">Добавить</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -272,6 +306,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 
   <!-- inject:svg -->
   <!-- endinject -->
