@@ -83,6 +83,7 @@
         <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
 
         <section class="catalog-navigation">
+          <h2 class="visually-hidden">Навигация по каталогу</h2>
           <div class="catalog-navigation__wrapper" role="navigation" aria-label="Каталог">
             <ul class="catalog-navigation__list">
               <li class="catalog-navigation__item catalog-navigation__item--interior">
@@ -169,6 +170,7 @@
     </section>
 
     <section class="modal">
+      <h2 class="visually-hidden">Выбор размера товара</h2>
       <div class="modal__wrapper">
         <p class="modal__header">Добавить в корзину</p>
 
@@ -203,6 +205,7 @@
     </section>
 
     <section class="about">
+      <h2 class="visually-hidden">О нас</h2>
       <div class="about__wrapper">
         <p class="about__title">Коротко о нас:</p>
         <ul class="about__list">
@@ -309,7 +312,7 @@
           </a>
         </div>
         <div class="reviews__actions">
-          <a class="reviews__button button" href="#">Написать</a>
+          <a class="reviews__button button" href="/reviews.html">Написать</a>
         </div>
       </div>
     </section>
@@ -331,22 +334,23 @@
           <p class="contacts__address-text">г. Санкт-Петербург<br /> ул. Большая Конюшенная<br /> д. 19/8, офис 101
           </p>
         </div>
-        <div class="contacts__map map">
-          <picture>
-            <source type="image/webp" media="(min-width: 1140px)"
-              srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-            <source media="(min-width: 1140px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
-          </picture>
+      </div>
 
-        </div>
-        <div class="contacts__action">
-          <a class="contacts__button button" href="#">Напишите нам</a>
-        </div>
+      <div class="contacts__map map" id="map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1140px)"
+            srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+          <source media="(min-width: 1140px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+        </picture>
+      </div>
+
+      <div class="contacts__action">
+        <a class="contacts__button button" href="#">Напишите нам</a>
       </div>
     </section>
   </main>
@@ -399,6 +403,9 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9gQQ9VEC1RVc6mKvGpTQT2QxhcTa1LqY&callback=initMap">
+    </script>
 
   <!-- inject:svg -->
   <!-- endinject -->

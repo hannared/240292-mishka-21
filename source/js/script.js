@@ -34,3 +34,22 @@ function load() {
 }
 
 window.addEventListener('load', load, false);
+
+
+function initMap() {
+  var map = new google.maps.Map(
+      document.getElementById('map'), {
+          center: new google.maps.LatLng(59.938883, 30.323546),
+          zoom: 18
+      });
+
+  var mapPin = {
+      position: new google.maps.LatLng(59.938883, 30.323546),
+      type: 'info'
+  };
+
+  new google.maps.Marker({
+      position: mapPin.position,
+      map: map
+  });
+}
