@@ -1,12 +1,12 @@
-const icon = document.querySelector('.user-list__icon--cart');
-const text = document.querySelector('.user-list__item--cart');
+const icon = document.querySelector('.nav__list-icon--cart');
+const text = document.querySelector('.nav__list-item--cart');
 const orderButtons = document.querySelectorAll('.bestseller__button, .catalog__button');
 const modal = document.querySelector('.modal');
 
 function cartHover() {
   if (icon && text) {
-    icon.classList.toggle('user-list__icon--hover');
-    text.classList.toggle('user-list__icon--hover');
+    icon.classList.toggle('nav__list-icon--hover');
+    text.classList.toggle('nav__list-icon--hover');
   }
 }
 
