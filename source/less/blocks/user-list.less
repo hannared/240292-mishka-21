@@ -119,12 +119,16 @@
   display: flex;
   border-top: 1px solid @grey-light;
 
-  .user-list__icon--hover {
-    opacity: 0.6;
+  &.user-list__icon--hover {
+    .user-list__link {
+      opacity: 0.6;
+    }
   }
 
   .user-list__icon--active {
-    opacity: 0.3;
+    .user-list__link {
+      opacity: 0.3;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -148,13 +152,18 @@
   grid-row: 5;
   display: flex;
 
-  .user-list__icon--hover {
-    color: @green;
+  &.user-list__icon--hover {
+    .user-list__icon-link {
+      opacity: 1;
+      color: @green;
+    }
   }
 
   .user-list__icon--active {
-    color: @green;
-    opacity: 0.3;
+    .user-list__icon-link {
+      color: @green;
+      opacity: 0.3;
+    }
   }
 
   .user-list__icon-link {
