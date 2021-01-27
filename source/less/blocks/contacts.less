@@ -144,12 +144,14 @@
   margin-bottom: 30px;
 
   &:hover,
-  &:focus,
-  &:active {
+  &:focus {
     color: @green-light-most;
 
-    &::after {
-      opacity: 0.1;
+
+    &:active {
+      &::after {
+        opacity: 0.1;
+      }
     }
   }
 
